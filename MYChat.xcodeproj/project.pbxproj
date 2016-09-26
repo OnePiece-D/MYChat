@@ -7,14 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78AF1F3D1D950B9400E995AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1F3C1D950B9400E995AA /* main.m */; };
-		78AF1F401D950B9400E995AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1F3F1D950B9400E995AA /* AppDelegate.m */; };
-		78AF1F431D950B9400E995AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1F421D950B9400E995AA /* ViewController.m */; };
 		78AF1F461D950B9400E995AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F441D950B9400E995AA /* Main.storyboard */; };
 		78AF1F481D950B9400E995AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F471D950B9400E995AA /* Assets.xcassets */; };
 		78AF1F4B1D950B9400E995AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F491D950B9400E995AA /* LaunchScreen.storyboard */; };
 		78AF1F561D950B9400E995AA /* MYChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1F551D950B9400E995AA /* MYChatTests.m */; };
 		78AF1F611D950B9400E995AA /* MYChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1F601D950B9400E995AA /* MYChatUITests.m */; };
+		78C3A7671D98B0B500951E02 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7661D98B0B500951E02 /* CoreMedia.framework */; };
+		78C3A7691D98B0C000951E02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7681D98B0C000951E02 /* AudioToolbox.framework */; };
+		78C3A76B1D98B0C800951E02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A76A1D98B0C800951E02 /* AVFoundation.framework */; };
+		78C3A76D1D98B0D200951E02 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A76C1D98B0D200951E02 /* MobileCoreServices.framework */; };
+		78C3A76F1D98B0DC00951E02 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A76E1D98B0DC00951E02 /* ImageIO.framework */; };
+		78C3A7711D98B0F300951E02 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7701D98B0F300951E02 /* libc++.tbd */; };
+		78C3A7731D98B0FC00951E02 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7721D98B0FC00951E02 /* libz.tbd */; };
+		78C3A7751D98B10A00951E02 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7741D98B10A00951E02 /* libstdc++.6.0.9.tbd */; };
+		78C3A7771D98B11700951E02 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7761D98B11700951E02 /* libsqlite3.tbd */; };
+		78C3A7A61D98B5C600951E02 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7A51D98B5C600951E02 /* libiconv.tbd */; };
+		78C3A7E81D98B75B00951E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7B01D98B75B00951E02 /* AppDelegate.m */; };
+		78C3A7E91D98B75B00951E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7B01D98B75B00951E02 /* AppDelegate.m */; };
+		78C3A7EC1D98B75B00951E02 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7E11D98B75B00951E02 /* libHyphenateFullSDK.a */; };
+		78C3A7ED1D98B75B00951E02 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C3A7E11D98B75B00951E02 /* libHyphenateFullSDK.a */; };
+		78C3A7F11D98B7E900951E02 /* ChatConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7F01D98B7E900951E02 /* ChatConfig.m */; };
+		78C3A7F21D98B7E900951E02 /* ChatConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7F01D98B7E900951E02 /* ChatConfig.m */; };
+		78C3A7F51D98B87A00951E02 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78C3A7F31D98B87A00951E02 /* Info.plist */; };
+		78C3A7F61D98B87A00951E02 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78C3A7F31D98B87A00951E02 /* Info.plist */; };
+		78C3A7F71D98B87A00951E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7F41D98B87A00951E02 /* main.m */; };
+		78C3A7F81D98B87A00951E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7F41D98B87A00951E02 /* main.m */; };
+		78C3A7FF1D98CC0D00951E02 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7FE1D98CC0D00951E02 /* RootViewController.m */; };
+		78C3A8001D98CC0D00951E02 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A7FE1D98CC0D00951E02 /* RootViewController.m */; };
+		78C3A8031D98CC1900951E02 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8021D98CC1900951E02 /* RootView.m */; };
+		78C3A8041D98CC1900951E02 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8021D98CC1900951E02 /* RootView.m */; };
+		78C3A8071D98CC2700951E02 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8061D98CC2700951E02 /* RootModel.m */; };
+		78C3A8081D98CC2700951E02 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8061D98CC2700951E02 /* RootModel.m */; };
+		78C3A80D1D98CCD900951E02 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A80C1D98CCD900951E02 /* HomeController.m */; };
+		78C3A80E1D98CCD900951E02 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A80C1D98CCD900951E02 /* HomeController.m */; };
+		78C3A8111D98CD0000951E02 /* NaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8101D98CD0000951E02 /* NaviController.m */; };
+		78C3A8121D98CD0000951E02 /* NaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8101D98CD0000951E02 /* NaviController.m */; };
+		78C3A8151D98CD1000951E02 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8141D98CD1000951E02 /* TabBarController.m */; };
+		78C3A8161D98CD1000951E02 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8141D98CD1000951E02 /* TabBarController.m */; };
+		78C3A8191D98CD3400951E02 /* NaviConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8181D98CD3400951E02 /* NaviConfig.m */; };
+		78C3A81A1D98CD3400951E02 /* NaviConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8181D98CD3400951E02 /* NaviConfig.m */; };
+		78C3A81D1D98CD4400951E02 /* TabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A81C1D98CD4400951E02 /* TabBarConfig.m */; };
+		78C3A81E1D98CD4400951E02 /* TabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A81C1D98CD4400951E02 /* TabBarConfig.m */; };
+		78C3A8231D98D05D00951E02 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8221D98D05D00951E02 /* MineController.m */; };
+		78C3A8241D98D05D00951E02 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8221D98D05D00951E02 /* MineController.m */; };
+		78C3A8271D98D0AB00951E02 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8261D98D0AB00951E02 /* DiscoverController.m */; };
+		78C3A8281D98D0AB00951E02 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8261D98D0AB00951E02 /* DiscoverController.m */; };
+		78C3A82C1D98D4AD00951E02 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A82B1D98D4AD00951E02 /* UIImage+Extension.m */; };
+		78C3A82D1D98D4AD00951E02 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A82B1D98D4AD00951E02 /* UIImage+Extension.m */; };
+		78C3A8351D99211500951E02 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8341D99211500951E02 /* LoginController.m */; };
+		78C3A8361D99211500951E02 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C3A8341D99211500951E02 /* LoginController.m */; };
+		BB012521B359FB3D8DD17619 /* libPods-MYChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E23127159B51A68CAF6DC2 /* libPods-MYChat.a */; };
+		C12C4D5615C13E925C2E0C7A /* libPods-MYChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F205DB40FA147DB48A10A17C /* libPods-MYChatTests.a */; };
+		E96B59FCF234A6D514685AEA /* libPods-MYChatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB5CE2EFF1FA4E93C92E27C /* libPods-MYChatUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +79,108 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05E23127159B51A68CAF6DC2 /* libPods-MYChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MYChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B27CAC4E3066ACD57B716D1 /* Pods-MYChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChat/Pods-MYChat.debug.xcconfig"; sourceTree = "<group>"; };
+		41F6E8F756C97269CA8FFA14 /* Pods-MYChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		424A19870D0485A627542A0B /* Pods-MYChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatUITests/Pods-MYChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		78AF1F381D950B9400E995AA /* MYChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		78AF1F3C1D950B9400E995AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		78AF1F3E1D950B9400E995AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		78AF1F3F1D950B9400E995AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		78AF1F411D950B9400E995AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		78AF1F421D950B9400E995AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		78AF1F451D950B9400E995AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78AF1F471D950B9400E995AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78AF1F4A1D950B9400E995AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		78AF1F4C1D950B9400E995AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78AF1F511D950B9400E995AA /* MYChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF1F551D950B9400E995AA /* MYChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatTests.m; sourceTree = "<group>"; };
 		78AF1F571D950B9400E995AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78AF1F5C1D950B9400E995AA /* MYChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF1F601D950B9400E995AA /* MYChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatUITests.m; sourceTree = "<group>"; };
 		78AF1F621D950B9400E995AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C3A7661D98B0B500951E02 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		78C3A7681D98B0C000951E02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		78C3A76A1D98B0C800951E02 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		78C3A76C1D98B0D200951E02 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		78C3A76E1D98B0DC00951E02 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		78C3A7701D98B0F300951E02 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		78C3A7721D98B0FC00951E02 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		78C3A7741D98B10A00951E02 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		78C3A7761D98B11700951E02 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		78C3A7A51D98B5C600951E02 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		78C3A7A91D98B66A00951E02 /* EasyWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyWork.h; sourceTree = "<group>"; };
+		78C3A7AF1D98B75B00951E02 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78C3A7B01D98B75B00951E02 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78C3A7BA1D98B75B00951E02 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
+		78C3A7BB1D98B75B00951E02 /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
+		78C3A7BC1D98B75B00951E02 /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
+		78C3A7BD1D98B75B00951E02 /* EMCallSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallSession.h; sourceTree = "<group>"; };
+		78C3A7BE1D98B75B00951E02 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
+		78C3A7BF1D98B75B00951E02 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
+		78C3A7C01D98B75B00951E02 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
+		78C3A7C11D98B75B00951E02 /* EMClient+Call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMClient+Call.h"; sourceTree = "<group>"; };
+		78C3A7C21D98B75B00951E02 /* EMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClient.h; sourceTree = "<group>"; };
+		78C3A7C31D98B75B00951E02 /* EMClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMClientDelegate.h; sourceTree = "<group>"; };
+		78C3A7C41D98B75B00951E02 /* EMCmdMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCmdMessageBody.h; sourceTree = "<group>"; };
+		78C3A7C51D98B75B00951E02 /* EMContactManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMContactManagerDelegate.h; sourceTree = "<group>"; };
+		78C3A7C61D98B75B00951E02 /* EMConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversation.h; sourceTree = "<group>"; };
+		78C3A7C71D98B75B00951E02 /* EMCursorResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCursorResult.h; sourceTree = "<group>"; };
+		78C3A7C81D98B75B00951E02 /* EMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMError.h; sourceTree = "<group>"; };
+		78C3A7C91D98B75B00951E02 /* EMErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorCode.h; sourceTree = "<group>"; };
+		78C3A7CA1D98B75B00951E02 /* EMFileMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFileMessageBody.h; sourceTree = "<group>"; };
+		78C3A7CB1D98B75B00951E02 /* EMGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroup.h; sourceTree = "<group>"; };
+		78C3A7CC1D98B75B00951E02 /* EMGroupManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupManagerDelegate.h; sourceTree = "<group>"; };
+		78C3A7CD1D98B75B00951E02 /* EMGroupOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupOptions.h; sourceTree = "<group>"; };
+		78C3A7CE1D98B75B00951E02 /* EMImageMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMImageMessageBody.h; sourceTree = "<group>"; };
+		78C3A7CF1D98B75B00951E02 /* EMLocationMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLocationMessageBody.h; sourceTree = "<group>"; };
+		78C3A7D01D98B75B00951E02 /* EMMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMessage.h; sourceTree = "<group>"; };
+		78C3A7D11D98B75B00951E02 /* EMMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMessageBody.h; sourceTree = "<group>"; };
+		78C3A7D21D98B75B00951E02 /* EMOptions+PrivateDeploy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMOptions+PrivateDeploy.h"; sourceTree = "<group>"; };
+		78C3A7D31D98B75B00951E02 /* EMOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMOptions.h; sourceTree = "<group>"; };
+		78C3A7D41D98B75B00951E02 /* EMPushOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMPushOptions.h; sourceTree = "<group>"; };
+		78C3A7D51D98B75B00951E02 /* EMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSDK.h; sourceTree = "<group>"; };
+		78C3A7D61D98B75B00951E02 /* EMSDKFull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSDKFull.h; sourceTree = "<group>"; };
+		78C3A7D71D98B75B00951E02 /* EMTextMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTextMessageBody.h; sourceTree = "<group>"; };
+		78C3A7D81D98B75B00951E02 /* EMVideoMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVideoMessageBody.h; sourceTree = "<group>"; };
+		78C3A7D91D98B75B00951E02 /* EMVoiceMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceMessageBody.h; sourceTree = "<group>"; };
+		78C3A7DA1D98B75B00951E02 /* IEMCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMCallManager.h; sourceTree = "<group>"; };
+		78C3A7DB1D98B75B00951E02 /* IEMChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMChatManager.h; sourceTree = "<group>"; };
+		78C3A7DC1D98B75B00951E02 /* IEMChatroomManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMChatroomManager.h; sourceTree = "<group>"; };
+		78C3A7DD1D98B75B00951E02 /* IEMContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMContactManager.h; sourceTree = "<group>"; };
+		78C3A7DE1D98B75B00951E02 /* IEMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMGroupManager.h; sourceTree = "<group>"; };
+		78C3A7DF1D98B75B00951E02 /* OpenGLView20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView20.h; sourceTree = "<group>"; };
+		78C3A7E11D98B75B00951E02 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
+		78C3A7EF1D98B7E900951E02 /* ChatConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatConfig.h; sourceTree = "<group>"; };
+		78C3A7F01D98B7E900951E02 /* ChatConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatConfig.m; sourceTree = "<group>"; };
+		78C3A7F31D98B87A00951E02 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C3A7F41D98B87A00951E02 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78C3A7FD1D98CC0D00951E02 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		78C3A7FE1D98CC0D00951E02 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		78C3A8011D98CC1900951E02 /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		78C3A8021D98CC1900951E02 /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
+		78C3A8051D98CC2700951E02 /* RootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootModel.h; sourceTree = "<group>"; };
+		78C3A8061D98CC2700951E02 /* RootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootModel.m; sourceTree = "<group>"; };
+		78C3A80B1D98CCD900951E02 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		78C3A80C1D98CCD900951E02 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		78C3A80F1D98CD0000951E02 /* NaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviController.h; sourceTree = "<group>"; };
+		78C3A8101D98CD0000951E02 /* NaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviController.m; sourceTree = "<group>"; };
+		78C3A8131D98CD1000951E02 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		78C3A8141D98CD1000951E02 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		78C3A8171D98CD3400951E02 /* NaviConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviConfig.h; sourceTree = "<group>"; };
+		78C3A8181D98CD3400951E02 /* NaviConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviConfig.m; sourceTree = "<group>"; };
+		78C3A81B1D98CD4400951E02 /* TabBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarConfig.h; sourceTree = "<group>"; };
+		78C3A81C1D98CD4400951E02 /* TabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarConfig.m; sourceTree = "<group>"; };
+		78C3A8211D98D05D00951E02 /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		78C3A8221D98D05D00951E02 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		78C3A8251D98D0AB00951E02 /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
+		78C3A8261D98D0AB00951E02 /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
+		78C3A82A1D98D4AD00951E02 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		78C3A82B1D98D4AD00951E02 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		78C3A8301D991ACF00951E02 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		78C3A8311D991CE300951E02 /* AppKeyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKeyConfig.h; sourceTree = "<group>"; };
+		78C3A8321D991D0D00951E02 /* EasyWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyWork.h; sourceTree = "<group>"; };
+		78C3A8331D99211500951E02 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		78C3A8341D99211500951E02 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		B41A39C96E5E78A84C0661A6 /* Pods-MYChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatUITests/Pods-MYChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDB5CE2EFF1FA4E93C92E27C /* libPods-MYChatUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MYChatUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYChat/Pods-MYChat.release.xcconfig"; sourceTree = "<group>"; };
+		E97691CB44272503D1628D7E /* Pods-MYChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F205DB40FA147DB48A10A17C /* libPods-MYChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MYChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +188,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3A7A61D98B5C600951E02 /* libiconv.tbd in Frameworks */,
+				78C3A7771D98B11700951E02 /* libsqlite3.tbd in Frameworks */,
+				78C3A7751D98B10A00951E02 /* libstdc++.6.0.9.tbd in Frameworks */,
+				78C3A7731D98B0FC00951E02 /* libz.tbd in Frameworks */,
+				78C3A7711D98B0F300951E02 /* libc++.tbd in Frameworks */,
+				78C3A76F1D98B0DC00951E02 /* ImageIO.framework in Frameworks */,
+				78C3A7EC1D98B75B00951E02 /* libHyphenateFullSDK.a in Frameworks */,
+				78C3A76D1D98B0D200951E02 /* MobileCoreServices.framework in Frameworks */,
+				78C3A76B1D98B0C800951E02 /* AVFoundation.framework in Frameworks */,
+				78C3A7691D98B0C000951E02 /* AudioToolbox.framework in Frameworks */,
+				78C3A7671D98B0B500951E02 /* CoreMedia.framework in Frameworks */,
+				BB012521B359FB3D8DD17619 /* libPods-MYChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +207,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3A7ED1D98B75B00951E02 /* libHyphenateFullSDK.a in Frameworks */,
+				C12C4D5615C13E925C2E0C7A /* libPods-MYChatTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +216,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96B59FCF234A6D514685AEA /* libPods-MYChatUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B13A1599126386D92CDC7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7A51D98B5C600951E02 /* libiconv.tbd */,
+				78C3A7761D98B11700951E02 /* libsqlite3.tbd */,
+				78C3A7741D98B10A00951E02 /* libstdc++.6.0.9.tbd */,
+				78C3A7721D98B0FC00951E02 /* libz.tbd */,
+				78C3A7701D98B0F300951E02 /* libc++.tbd */,
+				78C3A76E1D98B0DC00951E02 /* ImageIO.framework */,
+				78C3A76C1D98B0D200951E02 /* MobileCoreServices.framework */,
+				78C3A76A1D98B0C800951E02 /* AVFoundation.framework */,
+				78C3A7681D98B0C000951E02 /* AudioToolbox.framework */,
+				78C3A7661D98B0B500951E02 /* CoreMedia.framework */,
+				05E23127159B51A68CAF6DC2 /* libPods-MYChat.a */,
+				F205DB40FA147DB48A10A17C /* libPods-MYChatTests.a */,
+				DDB5CE2EFF1FA4E93C92E27C /* libPods-MYChatUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78AF1F2F1D950B9400E995AA = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +250,8 @@
 				78AF1F541D950B9400E995AA /* MYChatTests */,
 				78AF1F5F1D950B9400E995AA /* MYChatUITests */,
 				78AF1F391D950B9400E995AA /* Products */,
+				7D0E4046E6B97B377F771F02 /* Pods */,
+				5B13A1599126386D92CDC7F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +268,16 @@
 		78AF1F3A1D950B9400E995AA /* MYChat */ = {
 			isa = PBXGroup;
 			children = (
-				78AF1F3E1D950B9400E995AA /* AppDelegate.h */,
-				78AF1F3F1D950B9400E995AA /* AppDelegate.m */,
-				78AF1F411D950B9400E995AA /* ViewController.h */,
-				78AF1F421D950B9400E995AA /* ViewController.m */,
-				78AF1F441D950B9400E995AA /* Main.storyboard */,
-				78AF1F471D950B9400E995AA /* Assets.xcassets */,
-				78AF1F491D950B9400E995AA /* LaunchScreen.storyboard */,
-				78AF1F4C1D950B9400E995AA /* Info.plist */,
+				78C3A8371D99246100951E02 /* Action */,
+				78C3A7B71D98B75B00951E02 /* lib */,
+				78C3A7AA1D98B75B00951E02 /* Chat */,
+				78C3A7AB1D98B75B00951E02 /* Config */,
+				78C3A7AE1D98B75B00951E02 /* Delegate */,
+				78C3A7B11D98B75B00951E02 /* EasyWork */,
+				78C3A7B41D98B75B00951E02 /* Index */,
+				78C3A7E21D98B75B00951E02 /* Net */,
+				78C3A7E31D98B75B00951E02 /* Video */,
+				78C3A7A71D98B62100951E02 /* EasyWork */,
 				78AF1F3B1D950B9400E995AA /* Supporting Files */,
 			);
 			path = MYChat;
@@ -117,7 +286,12 @@
 		78AF1F3B1D950B9400E995AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				78AF1F3C1D950B9400E995AA /* main.m */,
+				78C3A7F31D98B87A00951E02 /* Info.plist */,
+				78C3A7F41D98B87A00951E02 /* main.m */,
+				78AF1F441D950B9400E995AA /* Main.storyboard */,
+				78AF1F471D950B9400E995AA /* Assets.xcassets */,
+				78AF1F491D950B9400E995AA /* LaunchScreen.storyboard */,
+				78C3A8301D991ACF00951E02 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +314,247 @@
 			path = MYChatUITests;
 			sourceTree = "<group>";
 		};
+		78C3A7A71D98B62100951E02 /* EasyWork */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7A91D98B66A00951E02 /* EasyWork.h */,
+			);
+			path = EasyWork;
+			sourceTree = "<group>";
+		};
+		78C3A7AA1D98B75B00951E02 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7EE1D98B7CB00951E02 /* ChatConfig */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		78C3A7AB1D98B75B00951E02 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A8171D98CD3400951E02 /* NaviConfig.h */,
+				78C3A8181D98CD3400951E02 /* NaviConfig.m */,
+				78C3A81B1D98CD4400951E02 /* TabBarConfig.h */,
+				78C3A81C1D98CD4400951E02 /* TabBarConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		78C3A7AE1D98B75B00951E02 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7AF1D98B75B00951E02 /* AppDelegate.h */,
+				78C3A7B01D98B75B00951E02 /* AppDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		78C3A7B11D98B75B00951E02 /* EasyWork */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A8291D98D46E00951E02 /* Category */,
+				78C3A8311D991CE300951E02 /* AppKeyConfig.h */,
+				78C3A8321D991D0D00951E02 /* EasyWork.h */,
+			);
+			path = EasyWork;
+			sourceTree = "<group>";
+		};
+		78C3A7B41D98B75B00951E02 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A81F1D98D04E00951E02 /* Discover */,
+				78C3A8201D98D04E00951E02 /* Mine */,
+				78C3A8091D98CCC800951E02 /* Home */,
+				78C3A80A1D98CCC800951E02 /* Navi */,
+				78C3A7FC1D98CBFA00951E02 /* Base */,
+				78C3A7FB1D98CBB600951E02 /* Login */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		78C3A7B71D98B75B00951E02 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7B81D98B75B00951E02 /* HyphenateFullSDK */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		78C3A7B81D98B75B00951E02 /* HyphenateFullSDK */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7B91D98B75B00951E02 /* include */,
+				78C3A7E01D98B75B00951E02 /* lib */,
+			);
+			path = HyphenateFullSDK;
+			sourceTree = "<group>";
+		};
+		78C3A7B91D98B75B00951E02 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7BA1D98B75B00951E02 /* EMCallLocalView.h */,
+				78C3A7BB1D98B75B00951E02 /* EMCallManagerDelegate.h */,
+				78C3A7BC1D98B75B00951E02 /* EMCallRemoteView.h */,
+				78C3A7BD1D98B75B00951E02 /* EMCallSession.h */,
+				78C3A7BE1D98B75B00951E02 /* EMChatManagerDelegate.h */,
+				78C3A7BF1D98B75B00951E02 /* EMChatroom.h */,
+				78C3A7C01D98B75B00951E02 /* EMChatroomManagerDelegate.h */,
+				78C3A7C11D98B75B00951E02 /* EMClient+Call.h */,
+				78C3A7C21D98B75B00951E02 /* EMClient.h */,
+				78C3A7C31D98B75B00951E02 /* EMClientDelegate.h */,
+				78C3A7C41D98B75B00951E02 /* EMCmdMessageBody.h */,
+				78C3A7C51D98B75B00951E02 /* EMContactManagerDelegate.h */,
+				78C3A7C61D98B75B00951E02 /* EMConversation.h */,
+				78C3A7C71D98B75B00951E02 /* EMCursorResult.h */,
+				78C3A7C81D98B75B00951E02 /* EMError.h */,
+				78C3A7C91D98B75B00951E02 /* EMErrorCode.h */,
+				78C3A7CA1D98B75B00951E02 /* EMFileMessageBody.h */,
+				78C3A7CB1D98B75B00951E02 /* EMGroup.h */,
+				78C3A7CC1D98B75B00951E02 /* EMGroupManagerDelegate.h */,
+				78C3A7CD1D98B75B00951E02 /* EMGroupOptions.h */,
+				78C3A7CE1D98B75B00951E02 /* EMImageMessageBody.h */,
+				78C3A7CF1D98B75B00951E02 /* EMLocationMessageBody.h */,
+				78C3A7D01D98B75B00951E02 /* EMMessage.h */,
+				78C3A7D11D98B75B00951E02 /* EMMessageBody.h */,
+				78C3A7D21D98B75B00951E02 /* EMOptions+PrivateDeploy.h */,
+				78C3A7D31D98B75B00951E02 /* EMOptions.h */,
+				78C3A7D41D98B75B00951E02 /* EMPushOptions.h */,
+				78C3A7D51D98B75B00951E02 /* EMSDK.h */,
+				78C3A7D61D98B75B00951E02 /* EMSDKFull.h */,
+				78C3A7D71D98B75B00951E02 /* EMTextMessageBody.h */,
+				78C3A7D81D98B75B00951E02 /* EMVideoMessageBody.h */,
+				78C3A7D91D98B75B00951E02 /* EMVoiceMessageBody.h */,
+				78C3A7DA1D98B75B00951E02 /* IEMCallManager.h */,
+				78C3A7DB1D98B75B00951E02 /* IEMChatManager.h */,
+				78C3A7DC1D98B75B00951E02 /* IEMChatroomManager.h */,
+				78C3A7DD1D98B75B00951E02 /* IEMContactManager.h */,
+				78C3A7DE1D98B75B00951E02 /* IEMGroupManager.h */,
+				78C3A7DF1D98B75B00951E02 /* OpenGLView20.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		78C3A7E01D98B75B00951E02 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7E11D98B75B00951E02 /* libHyphenateFullSDK.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		78C3A7E21D98B75B00951E02 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		78C3A7E31D98B75B00951E02 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		78C3A7EE1D98B7CB00951E02 /* ChatConfig */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7EF1D98B7E900951E02 /* ChatConfig.h */,
+				78C3A7F01D98B7E900951E02 /* ChatConfig.m */,
+			);
+			path = ChatConfig;
+			sourceTree = "<group>";
+		};
+		78C3A7FB1D98CBB600951E02 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A8331D99211500951E02 /* LoginController.h */,
+				78C3A8341D99211500951E02 /* LoginController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		78C3A7FC1D98CBFA00951E02 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A7FD1D98CC0D00951E02 /* RootViewController.h */,
+				78C3A7FE1D98CC0D00951E02 /* RootViewController.m */,
+				78C3A8011D98CC1900951E02 /* RootView.h */,
+				78C3A8021D98CC1900951E02 /* RootView.m */,
+				78C3A8051D98CC2700951E02 /* RootModel.h */,
+				78C3A8061D98CC2700951E02 /* RootModel.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		78C3A8091D98CCC800951E02 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A80B1D98CCD900951E02 /* HomeController.h */,
+				78C3A80C1D98CCD900951E02 /* HomeController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		78C3A80A1D98CCC800951E02 /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A80F1D98CD0000951E02 /* NaviController.h */,
+				78C3A8101D98CD0000951E02 /* NaviController.m */,
+				78C3A8131D98CD1000951E02 /* TabBarController.h */,
+				78C3A8141D98CD1000951E02 /* TabBarController.m */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
+		78C3A81F1D98D04E00951E02 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A8251D98D0AB00951E02 /* DiscoverController.h */,
+				78C3A8261D98D0AB00951E02 /* DiscoverController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		78C3A8201D98D04E00951E02 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A8211D98D05D00951E02 /* MineController.h */,
+				78C3A8221D98D05D00951E02 /* MineController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		78C3A8291D98D46E00951E02 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				78C3A82A1D98D4AD00951E02 /* UIImage+Extension.h */,
+				78C3A82B1D98D4AD00951E02 /* UIImage+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		78C3A8371D99246100951E02 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		7D0E4046E6B97B377F771F02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B27CAC4E3066ACD57B716D1 /* Pods-MYChat.debug.xcconfig */,
+				E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */,
+				E97691CB44272503D1628D7E /* Pods-MYChatTests.debug.xcconfig */,
+				41F6E8F756C97269CA8FFA14 /* Pods-MYChatTests.release.xcconfig */,
+				B41A39C96E5E78A84C0661A6 /* Pods-MYChatUITests.debug.xcconfig */,
+				424A19870D0485A627542A0B /* Pods-MYChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +562,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78AF1F651D950B9400E995AA /* Build configuration list for PBXNativeTarget "MYChat" */;
 			buildPhases = (
+				9C06299D0DD565070BA85BE2 /* [CP] Check Pods Manifest.lock */,
 				78AF1F341D950B9400E995AA /* Sources */,
 				78AF1F351D950B9400E995AA /* Frameworks */,
 				78AF1F361D950B9400E995AA /* Resources */,
+				B5BFD183E032114DC788E269 /* [CP] Embed Pods Frameworks */,
+				C65A7AC53FB104661F05C412 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +582,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78AF1F681D950B9400E995AA /* Build configuration list for PBXNativeTarget "MYChatTests" */;
 			buildPhases = (
+				E8824941BF8D439BDC3F19D6 /* [CP] Check Pods Manifest.lock */,
 				78AF1F4D1D950B9400E995AA /* Sources */,
 				78AF1F4E1D950B9400E995AA /* Frameworks */,
 				78AF1F4F1D950B9400E995AA /* Resources */,
+				FC3BECA2D5914EA8160C5959 /* [CP] Embed Pods Frameworks */,
+				D9BEC072C7989BC91E994B94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +603,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78AF1F6B1D950B9400E995AA /* Build configuration list for PBXNativeTarget "MYChatUITests" */;
 			buildPhases = (
+				1846E850997C4953FD8D45F6 /* [CP] Check Pods Manifest.lock */,
 				78AF1F581D950B9400E995AA /* Sources */,
 				78AF1F591D950B9400E995AA /* Frameworks */,
 				78AF1F5A1D950B9400E995AA /* Resources */,
+				B2C34CB4449E82243FB218F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +672,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3A7F51D98B87A00951E02 /* Info.plist in Resources */,
 				78AF1F4B1D950B9400E995AA /* LaunchScreen.storyboard in Resources */,
 				78AF1F481D950B9400E995AA /* Assets.xcassets in Resources */,
 				78AF1F461D950B9400E995AA /* Main.storyboard in Resources */,
@@ -259,6 +683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3A7F61D98B87A00951E02 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +696,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1846E850997C4953FD8D45F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C06299D0DD565070BA85BE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C34CB4449E82243FB218F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MYChatUITests/Pods-MYChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BFD183E032114DC788E269 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MYChat/Pods-MYChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C65A7AC53FB104661F05C412 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MYChat/Pods-MYChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9BEC072C7989BC91E994B94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8824941BF8D439BDC3F19D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3BECA2D5914EA8160C5959 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78AF1F341D950B9400E995AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78AF1F431D950B9400E995AA /* ViewController.m in Sources */,
-				78AF1F401D950B9400E995AA /* AppDelegate.m in Sources */,
-				78AF1F3D1D950B9400E995AA /* main.m in Sources */,
+				78C3A7F11D98B7E900951E02 /* ChatConfig.m in Sources */,
+				78C3A82C1D98D4AD00951E02 /* UIImage+Extension.m in Sources */,
+				78C3A81D1D98CD4400951E02 /* TabBarConfig.m in Sources */,
+				78C3A8071D98CC2700951E02 /* RootModel.m in Sources */,
+				78C3A7F71D98B87A00951E02 /* main.m in Sources */,
+				78C3A8351D99211500951E02 /* LoginController.m in Sources */,
+				78C3A8271D98D0AB00951E02 /* DiscoverController.m in Sources */,
+				78C3A8231D98D05D00951E02 /* MineController.m in Sources */,
+				78C3A8151D98CD1000951E02 /* TabBarController.m in Sources */,
+				78C3A7E81D98B75B00951E02 /* AppDelegate.m in Sources */,
+				78C3A8191D98CD3400951E02 /* NaviConfig.m in Sources */,
+				78C3A8031D98CC1900951E02 /* RootView.m in Sources */,
+				78C3A8111D98CD0000951E02 /* NaviController.m in Sources */,
+				78C3A80D1D98CCD900951E02 /* HomeController.m in Sources */,
+				78C3A7FF1D98CC0D00951E02 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +846,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3A82D1D98D4AD00951E02 /* UIImage+Extension.m in Sources */,
+				78C3A8121D98CD0000951E02 /* NaviController.m in Sources */,
+				78C3A81A1D98CD3400951E02 /* NaviConfig.m in Sources */,
+				78C3A7F81D98B87A00951E02 /* main.m in Sources */,
+				78C3A81E1D98CD4400951E02 /* TabBarConfig.m in Sources */,
+				78C3A7F21D98B7E900951E02 /* ChatConfig.m in Sources */,
+				78C3A8001D98CC0D00951E02 /* RootViewController.m in Sources */,
+				78C3A8081D98CC2700951E02 /* RootModel.m in Sources */,
 				78AF1F561D950B9400E995AA /* MYChatTests.m in Sources */,
+				78C3A8361D99211500951E02 /* LoginController.m in Sources */,
+				78C3A7E91D98B75B00951E02 /* AppDelegate.m in Sources */,
+				78C3A8161D98CD1000951E02 /* TabBarController.m in Sources */,
+				78C3A8281D98D0AB00951E02 /* DiscoverController.m in Sources */,
+				78C3A8041D98CC1900951E02 /* RootView.m in Sources */,
+				78C3A8241D98D05D00951E02 /* MineController.m in Sources */,
+				78C3A80E1D98CCD900951E02 /* HomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,35 +1000,62 @@
 		};
 		78AF1F661D950B9400E995AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B27CAC4E3066ACD57B716D1 /* Pods-MYChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MYChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		78AF1F671D950B9400E995AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MYChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		78AF1F691D950B9400E995AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97691CB44272503D1628D7E /* Pods-MYChatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
 				INFOPLIST_FILE = MYChatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MYChat.app/MYChat";
@@ -462,11 +1064,16 @@
 		};
 		78AF1F6A1D950B9400E995AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F6E8F756C97269CA8FFA14 /* Pods-MYChatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
 				INFOPLIST_FILE = MYChatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MYChat.app/MYChat";
@@ -475,6 +1082,7 @@
 		};
 		78AF1F6C1D950B9400E995AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41A39C96E5E78A84C0661A6 /* Pods-MYChatUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
 				INFOPLIST_FILE = MYChatUITests/Info.plist;
@@ -487,6 +1095,7 @@
 		};
 		78AF1F6D1D950B9400E995AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 424A19870D0485A627542A0B /* Pods-MYChatUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 9TP7NLYBD2;
 				INFOPLIST_FILE = MYChatUITests/Info.plist;
@@ -516,6 +1125,7 @@
 				78AF1F671D950B9400E995AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AF1F681D950B9400E995AA /* Build configuration list for PBXNativeTarget "MYChatTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +1134,7 @@
 				78AF1F6A1D950B9400E995AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78AF1F6B1D950B9400E995AA /* Build configuration list for PBXNativeTarget "MYChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +1143,7 @@
 				78AF1F6D1D950B9400E995AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
