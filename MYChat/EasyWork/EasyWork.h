@@ -12,6 +12,8 @@
 #import "AppKeyConfig.h"
 #import "UIImage+Extension.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 //关于尺寸
 #define kTabBarH        49.0f
 #define kStatusBarH     [UIApplication sharedApplication].statusBarFrame.size.height

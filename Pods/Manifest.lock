@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 52f7813ea1efdfe75c10c718d2978cfdc8beed06
+PODS:
+  - ReactiveCocoa (4.1.0):
+    - ReactiveCocoa/UI (= 4.1.0)
+    - Result (~> 2.0)
+  - ReactiveCocoa/Core (4.1.0):
+    - ReactiveCocoa/no-arc
+    - Result (~> 2.0)
+  - ReactiveCocoa/no-arc (4.1.0):
+    - Result (~> 2.0)
+  - ReactiveCocoa/UI (4.1.0):
+    - ReactiveCocoa/Core
+    - Result (~> 2.0)
+  - Result (2.1.0)
+
+DEPENDENCIES:
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
+  Result: d7f09a21f10428bb8d23a74c48999b591692c559
+
+PODFILE CHECKSUM: 6c4e758c1d01b3fa804a7a094ebcac8a799fa3b4
 
 COCOAPODS: 1.0.1
