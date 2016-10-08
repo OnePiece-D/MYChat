@@ -630,9 +630,9 @@
 				TargetAttributes = {
 					78AF1F371D950B9400E995AA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9TP7NLYBD2;
+						DevelopmentTeam = 932BSM8LG2;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					78AF1F501D950B9400E995AA = {
 						CreatedOnToolsVersion = 8.0;
@@ -1006,7 +1006,7 @@
 			baseConfigurationReference = 0B27CAC4E3066ACD57B716D1 /* Pods-MYChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9TP7NLYBD2;
+				DEVELOPMENT_TEAM = 932BSM8LG2;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1018,8 +1018,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MaiYaChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "afceb12d-1810-4aa3-987c-7ba04aec918b";
+				PROVISIONING_PROFILE_SPECIFIER = MYChat;
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1030,7 +1032,8 @@
 			baseConfigurationReference = E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9TP7NLYBD2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 932BSM8LG2;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1042,8 +1045,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MYChat/lib/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MYChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunluwang.MaiYaChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3962374d-002a-4df5-be2c-04288141405a";
+				PROVISIONING_PROFILE_SPECIFIER = "Distribution-MYChat";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
