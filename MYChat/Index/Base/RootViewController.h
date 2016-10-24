@@ -14,4 +14,9 @@
 
 @property (nonatomic, copy) NSString * naviTitle;
 
+#pragma mark -alert-
+- (void)alert:(NSString *)title
+      message:(NSString *)message
+      handler:(void(^)(UIAlertAction*))action;
+
 @end

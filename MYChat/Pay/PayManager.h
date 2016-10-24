@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import <AlipaySDK/AlipaySDK.h>
 
 @interface PayManager : NSObject
 
++ (instancetype)sharePay;
 
+
++ (void)setPayParamCallback:(void(^)(NSDictionary*))callback;
 
 @end

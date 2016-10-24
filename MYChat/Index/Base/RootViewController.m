@@ -26,6 +26,19 @@
 }
 
 
+#pragma mark -alert-
+- (void)alert:(NSString *)title
+      message:(NSString *)message
+      handler:(void(^)(UIAlertAction*))action{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction * sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:action];
+    [alert addAction:cancel];
+    [alert addAction:sure];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 #pragma mark -navi-
 
 //title

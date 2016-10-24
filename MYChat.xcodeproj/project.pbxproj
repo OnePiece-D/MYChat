@@ -24,6 +24,8 @@
 		780A13F91DB4B1D800A745E1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 780A13F71DB4B1D800A745E1 /* libcrypto.a */; };
 		780A13FA1DB4B1D800A745E1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 780A13F81DB4B1D800A745E1 /* libssl.a */; };
 		780A13FC1DB4B4E600A745E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780A13FB1DB4B4E600A745E1 /* SystemConfiguration.framework */; };
+		780F30131DBDB86300646BD4 /* ALocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 780F30121DBDB86300646BD4 /* ALocationManager.m */; };
+		780F30171DBDBACA00646BD4 /* AccessJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = 780F30161DBDBACA00646BD4 /* AccessJudge.m */; };
 		781476DA1DB47C5100B657B7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781476D91DB47C5100B657B7 /* CoreTelephony.framework */; };
 		781476DC1DB47C6800B657B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781476DB1DB47C6800B657B7 /* QuartzCore.framework */; };
 		781476DE1DB47C7F00B657B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781476DD1DB47C7E00B657B7 /* CoreText.framework */; };
@@ -211,6 +213,10 @@
 		780A13F71DB4B1D800A745E1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		780A13F81DB4B1D800A745E1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		780A13FB1DB4B4E600A745E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		780F30111DBDB86300646BD4 /* ALocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALocationManager.h; sourceTree = "<group>"; };
+		780F30121DBDB86300646BD4 /* ALocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALocationManager.m; sourceTree = "<group>"; };
+		780F30151DBDBACA00646BD4 /* AccessJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessJudge.h; sourceTree = "<group>"; };
+		780F30161DBDBACA00646BD4 /* AccessJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessJudge.m; sourceTree = "<group>"; };
 		781476D91DB47C5100B657B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		781476DB1DB47C6800B657B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		781476DD1DB47C7E00B657B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -518,6 +524,24 @@
 			path = openssl;
 			sourceTree = "<group>";
 		};
+		780F30101DBDB84500646BD4 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				780F30111DBDB86300646BD4 /* ALocationManager.h */,
+				780F30121DBDB86300646BD4 /* ALocationManager.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		780F30141DBDBACA00646BD4 /* AccessRight */ = {
+			isa = PBXGroup;
+			children = (
+				780F30151DBDBACA00646BD4 /* AccessJudge.h */,
+				780F30161DBDBACA00646BD4 /* AccessJudge.m */,
+			);
+			path = AccessRight;
+			sourceTree = "<group>";
+		};
 		781476291DB4749B00B657B7 /* Pay */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +667,8 @@
 		78C3A7B11D98B75B00951E02 /* EasyWork */ = {
 			isa = PBXGroup;
 			children = (
+				780F30141DBDBACA00646BD4 /* AccessRight */,
+				780F30101DBDB84500646BD4 /* Location */,
 				78C3A8291D98D46E00951E02 /* Category */,
 				78C3A8311D991CE300951E02 /* AppKeyConfig.h */,
 				78C3A8321D991D0D00951E02 /* EasyWork.h */,
@@ -1123,8 +1149,10 @@
 				780A13A21DB4AB0B00A745E1 /* NSDataEx.m in Sources */,
 				780A139D1DB4AB0B00A745E1 /* Order.m in Sources */,
 				78C3A7F11D98B7E900951E02 /* ChatConfig.m in Sources */,
+				780F30171DBDBACA00646BD4 /* AccessJudge.m in Sources */,
 				78C3A82C1D98D4AD00951E02 /* UIImage+Extension.m in Sources */,
 				78C3A81D1D98CD4400951E02 /* TabBarConfig.m in Sources */,
+				780F30131DBDB86300646BD4 /* ALocationManager.m in Sources */,
 				78C3A8071D98CC2700951E02 /* RootModel.m in Sources */,
 				780A139C1DB4AB0B00A745E1 /* APAuthV2Info.m in Sources */,
 				780A13A01DB4AB0B00A745E1 /* DataVerifier.m in Sources */,
