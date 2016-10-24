@@ -247,7 +247,6 @@
 		78C3A7741D98B10A00951E02 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		78C3A7761D98B11700951E02 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		78C3A7A51D98B5C600951E02 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		78C3A7A91D98B66A00951E02 /* EasyWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyWork.h; sourceTree = "<group>"; };
 		78C3A7AF1D98B75B00951E02 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78C3A7B01D98B75B00951E02 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		78C3A7BA1D98B75B00951E02 /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
@@ -591,7 +590,6 @@
 				78C3A7B41D98B75B00951E02 /* Index */,
 				78C3A7E21D98B75B00951E02 /* Net */,
 				78C3A7E31D98B75B00951E02 /* Video */,
-				78C3A7A71D98B62100951E02 /* EasyWork */,
 				78AF1F3B1D950B9400E995AA /* Supporting Files */,
 			);
 			path = MYChat;
@@ -626,14 +624,6 @@
 				78AF1F621D950B9400E995AA /* Info.plist */,
 			);
 			path = MYChatUITests;
-			sourceTree = "<group>";
-		};
-		78C3A7A71D98B62100951E02 /* EasyWork */ = {
-			isa = PBXGroup;
-			children = (
-				78C3A7A91D98B66A00951E02 /* EasyWork.h */,
-			);
-			path = EasyWork;
 			sourceTree = "<group>";
 		};
 		78C3A7AA1D98B75B00951E02 /* Chat */ = {

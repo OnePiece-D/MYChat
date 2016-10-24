@@ -8,12 +8,22 @@
 
 #import "AppDelegate.h"
 
+/**
+ *  三方
+ */
 #import <AlipaySDK/AlipaySDK.h>
 
+/**
+ *  公共配置
+ */
 #import "NaviConfig.h"
 #import "TabBarConfig.h"
-
 #import "ChatConfig.h"
+
+/**
+ *  权限
+ */
+#import "ALocationManager.h"
 
 @interface AppDelegate ()
 
@@ -60,12 +70,19 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    /**
+     *  位置权限
+     */
+    [ALocationManager shareManager];
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark -外部应用完成回调-
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url

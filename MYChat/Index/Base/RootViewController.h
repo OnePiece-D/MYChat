@@ -14,6 +14,16 @@
 
 @property (nonatomic, copy) NSString * naviTitle;
 
+/**
+ *  导航栏
+ */
+//left-Bar
+- (void)addLeftBarItem:(NSString *)name action:(SEL)action;
+- (void)addLeftBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action;
+//right-Bar
+- (void)addRightItem:(NSString *)name action:(SEL)action;
+- (void)addRIghtItemImage:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action;
+
 #pragma mark -alert-
 - (void)alert:(NSString *)title
       message:(NSString *)message

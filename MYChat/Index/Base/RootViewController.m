@@ -40,7 +40,6 @@
 
 
 #pragma mark -navi-
-
 //title
 - (void)setNaviTitle:(NSString *)naviTitle {
     self.naviTitleView.text = naviTitle;
@@ -66,6 +65,70 @@
     return _leftBar;
 }
 
+//left-Bar
+- (void)addLeftBarItem:(NSString *)name action:(SEL)action {
+    if (!action) {
+        action = @selector(popOrDismiss);
+    }
+    [self.navigationItem setLeftBarButtonItem:[self addBarButtonItem:name selectedName:nil action:action]];
+}
+
+- (void)addLeftBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action {
+    if (!action) {
+        action = @selector(popOrDismiss);
+    }
+    [self.navigationItem setLeftBarButtonItem:[self addBarButtonItem:imageName selectedName:selectedName action:action]];
+}
+
+//right-Bar
+- (void)addRightItem:(NSString *)name action:(SEL)action {
+    if (!action) {
+        action = @selector(popOrDismiss);
+    }
+    [self.navigationItem setRightBarButtonItem:[self addBarButtonItem:name selectedName:nil action:action]];
+}
+
+- (void)addRIghtItemImage:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action {
+    if (!action) {
+        action = @selector(popOrDismiss);
+    }
+    [self.navigationItem setRightBarButtonItem:[self addBarButtonItem:imageName selectedName:selectedName action:action]];
+}
+
+//添加图片或者字体在BarItem上
+- (UIBarButtonItem*)addBarButtonItem:(NSString*)name selectedName:(NSString *)selectedName action:(SEL)action {
+    
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    
+    //仅当两个都不是 nil 时才是添加图片，否则就是字体
+    if (name && selectedName) {
+        [button setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:selectedName] forState:UIControlStateHighlighted];
+    }else {
+        [button setTitle:name forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    }
+    
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    return item;
+}
+
+- (void)popOrDismiss {
+    NSArray *viewcontrollers=self.navigationController.viewControllers;
+    if (viewcontrollers.count>1) {
+        if ([viewcontrollers objectAtIndex:viewcontrollers.count-1]==self) {
+            //push方式
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
+    else{
+        //present方式
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
