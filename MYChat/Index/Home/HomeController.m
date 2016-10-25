@@ -10,23 +10,45 @@
 
 #import "NaviController.h"
 #import "LoginController.h"
-
+#import "DiscoverController.h"
 @interface HomeController ()
-
+@property (nonatomic, weak) id<myProtocol> protocol;
 @end
 
 @implementation HomeController
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviTitle = @"开始";
+//    LoginController * VC = [[LoginController alloc] init];
+//    NaviController * navi = [[NaviController alloc] initWithRootViewController:VC];
+//    [self presentViewController:navi animated:YES completion:nil];
     
-    LoginController * VC = [[LoginController alloc] init];
-    NaviController * navi = [[NaviController alloc] initWithRootViewController:VC];
-    [self presentViewController:navi animated:YES completion:nil];
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(100, 100, 100, 30);
+    [button setTitle:@"button" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
 }
 
+- (void)action {
+    LoginController<myProtocol> * VC = [[LoginController<myProtocol> alloc] init];
+    self.protocol = VC;
+    UINavigationController * navi = [UINavigationController.alloc initWithRootViewController:VC];
+    if ([self.protocol respondsToSelector:@selector(setMyName:)]) {
+        [self.protocol setMyName:@"asdadaw"];
+    }
+    [self presentViewController:navi animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

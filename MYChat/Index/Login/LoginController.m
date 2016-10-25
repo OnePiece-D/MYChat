@@ -7,8 +7,8 @@
 //
 
 #import "LoginController.h"
-
-@interface LoginController ()
+#import "myProtocol.h"
+@interface LoginController ()<myProtocol>
 
 @property (nonatomic, strong) UITextField * username;
 @property (nonatomic, strong) UITextField * passWord;
@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self addLeftBarItem:@"返回" action:nil];
+    
     [self.view addSubview:self.username];
     [self.view addSubview:self.passWord];
     [self.view addSubview:self.pushBtn];
@@ -48,6 +49,11 @@
         @strongify(self);
         [self requestNetResult];
     }];
+}
+
+
+- (void)setMyName:(NSString *)name {
+    NSLog(@"%@",name);
 }
 
 - (void)requestNetResult {

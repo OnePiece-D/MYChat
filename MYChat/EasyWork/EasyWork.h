@@ -9,6 +9,7 @@
 #ifndef EasyWork_h
 #define EasyWork_h
 
+#import "AppDelegate.h"
 #import "AppKeyConfig.h"
 #import "UIImage+Extension.h"
 

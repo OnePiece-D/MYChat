@@ -43,7 +43,10 @@
     
     [[NaviConfig config] defaultConfig];
     
-    self.window.rootViewController = [TabBarConfig setTabBar];
+    UITabBarController * tabBar = [TabBarConfig setTabBar];
+    self.window.rootViewController = tabBar;
+    
+    self.tabBarItems = tabBar.viewControllers;
     
     return YES;
 }

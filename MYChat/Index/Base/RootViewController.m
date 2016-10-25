@@ -17,6 +17,13 @@
 
 @implementation RootViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -51,6 +58,7 @@
         
         _naviTitleView.textAlignment = NSTextAlignmentCenter;
         _naviTitleView.font = kFont(14);
+        _naviTitleView.textColor = [UIColor whiteColor];
     }
     return _naviTitleView;
 }

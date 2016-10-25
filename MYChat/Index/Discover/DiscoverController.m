@@ -10,37 +10,46 @@
 
 #import "ALocationManager.h"
 
+
 @interface DiscoverController ()
 
 @end
 
 @implementation DiscoverController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviTitle = @"新大陆";
-   
+    
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    ALocationManager * locationManager = [ALocationManager shareManager];
-    
-    if (locationManager) {
-        //有权限
-        @weakify(self);
-        locationManager.updateLocation = ^(CLLocation *location,CGFloat latitude,CGFloat longitude){
-            @strongify(self);
-            
-            [self alert:nil message:@"你好" handler:nil];
-        };
-    }else {
-        [self alert:nil message:@"没有权限" handler:^(UIAlertAction * action) {
-            
-        }];
-    }
+//    ALocationManager * locationManager = [ALocationManager shareManager];
+//    
+//    if (locationManager) {
+//        //有权限
+//        @weakify(self);
+//        locationManager.updateLocation = ^(CLLocation *location,CGFloat latitude,CGFloat longitude){
+//            @strongify(self);
+//            
+//            [self alert:nil message:@"你好" handler:nil];
+//        };
+//    }else {
+//        [self alert:nil message:@"没有权限" handler:^(UIAlertAction * action) {
+//            
+//        }];
+//    }
 }
 
 

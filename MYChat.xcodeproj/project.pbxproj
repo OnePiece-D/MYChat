@@ -227,6 +227,7 @@
 		781476E71DB47D3400B657B7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		781477351DB47F0000B657B7 /* PayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayManager.h; sourceTree = "<group>"; };
 		781477361DB47F0000B657B7 /* PayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayManager.m; sourceTree = "<group>"; };
+		781DA8971DBF4AEC009CEE41 /* myProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myProtocol.h; sourceTree = "<group>"; };
 		78AF1F381D950B9400E995AA /* MYChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF1F451D950B9400E995AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78AF1F471D950B9400E995AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -798,6 +799,7 @@
 		78C3A8091D98CCC800951E02 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				781DA8971DBF4AEC009CEE41 /* myProtocol.h */,
 				78C3A80B1D98CCD900951E02 /* HomeController.h */,
 				78C3A80C1D98CCD900951E02 /* HomeController.m */,
 			);

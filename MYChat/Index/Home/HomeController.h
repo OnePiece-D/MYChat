@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 
-@interface HomeController : RootViewController
+#import "myProtocol.h"
+
+@interface HomeController : RootViewController<myProtocol>
 
 @end
