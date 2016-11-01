@@ -9,11 +9,39 @@
 #ifndef EasyWork_h
 #define EasyWork_h
 
-#import "AppDelegate.h"
-#import "AppKeyConfig.h"
+/**
+ 自己的基础配置
+ */
+#import "AppDelegate.h"             //delegate
+
+
+#import "AppKeyConfig.h"            //用到三方基本参数配置
+#import "ChatConfig.h"              //环信的基础配置
+
+/**
+ *  工具类
+ */
+#import "Factory.h"                 //用于快速创建
+#import "EaseUI.h"                  //环信的EaseUI
+
+/**
+ 类别
+ */
 #import "UIImage+Extension.h"
 
+/**
+ 三方库的框架
+ */
+#import <AFNetworking/AFNetworking.h>
+
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
+#import <Masonry/Masonry.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Toast/UIView+Toast.h>
+
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
 
 //关于尺寸
 #define kTabBarH        49.0f

@@ -16,6 +16,10 @@
 
 @property (nonatomic, strong) UIButton * pushBtn;
 
+//登录和注册按钮
+@property (nonatomic, strong) UIButton * loginBtn;
+@property (nonatomic, strong) UIButton * registBtn;
+
 @end
 
 @implementation LoginController
@@ -23,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /*
     [self addLeftBarItem:@"返回" action:nil];
     
     [self.view addSubview:self.username];
@@ -49,8 +54,66 @@
         @strongify(self);
         [self requestNetResult];
     }];
+     */
+    
+    [self addSubView];
+    [self setLocation];
 }
 
+#pragma mark -Action-
+- (void)clickAction:(id)sender {
+    if (sender == _loginBtn) {
+        //登录处理
+        EMError *error = [EM_Share loginWithUsername:USER_ONE password:USER_ONE_PASSWORD];
+        if (!error) {
+            DLog(@"登录成功");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self dismissViewControllerAnimated:YES completion:nil];
+            });
+        }else {
+            DLog(@"%@",error);
+        }
+    }else if(sender == _registBtn) {
+        //注册处理
+        EMError *error =  [EM_Share registerWithUsername:USER_ONE password:USER_ONE_PASSWORD];
+        if (!error) {
+            DLog(@"注册成功");
+        }else {
+            DLog(@"%@",error);
+        }
+    }else {
+        [self alert:nil message:@"没有对应信息" sure:nil cancel:nil singleCancel:YES];
+    }
+}
+
+
+#pragma mark -控件位置-
+- (void)setLocation {
+    __weak typeof(self) wSelf =self;
+    __weak typeof(UIView*) wView = self.view;
+    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(wView).offset(100);
+        make.right.equalTo(wView).offset(-100);
+        
+        make.top.equalTo(wView).offset(100);
+        make.height.mas_equalTo(@44);
+    }];
+    [self.registBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(wView).offset(100);
+        make.right.equalTo(wView).offset(-100);
+        
+        make.top.equalTo(wSelf.loginBtn.mas_bottom).offset(10);
+        make.height.mas_equalTo(@44);
+    }];
+}
+
+#pragma mark -添加视图-
+- (void)addSubView {
+    [self.view addSubview:self.loginBtn];
+    [self.view addSubview:self.registBtn];
+}
+
+#pragma mark -其他的没啥用的-
 
 - (void)setMyName:(NSString *)name {
     NSLog(@"%@",name);
@@ -99,6 +162,23 @@
     }
     return _pushBtn;
 }
+
+
+#pragma ###############################################################################
+- (UIButton *)loginBtn {
+    if (!_loginBtn) {
+        _loginBtn = [Factory createBtn:CGRectZero title:@"登录" type:UIButtonTypeSystem target:self action:@selector(clickAction:)];
+    }
+    return _loginBtn;
+}
+
+- (UIButton *)registBtn {
+    if (!_registBtn) {
+        _registBtn = [Factory createBtn:CGRectZero title:@"注册" type:UIButtonTypeSystem target:self action:@selector(clickAction:)];
+    }
+    return _registBtn;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

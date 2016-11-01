@@ -36,12 +36,16 @@
 #pragma mark -alert-
 - (void)alert:(NSString *)title
       message:(NSString *)message
-      handler:(void(^)(UIAlertAction*))action{
+      sure:(void(^)(UIAlertAction*))sureAction
+       cancel:(void(^)(UIAlertAction*))cancelAction singleCancel:(BOOL)single {
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction * sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:action];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:cancelAction];
     [alert addAction:cancel];
-    [alert addAction:sure];
+    if (single != YES) {
+        
+        UIAlertAction * sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:sureAction];
+        [alert addAction:sure];
+    }
     [self presentViewController:alert animated:YES completion:nil];
 }
 

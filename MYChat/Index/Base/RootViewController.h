@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "EasyWork.h"
 
 @interface RootViewController : UIViewController
@@ -27,6 +26,8 @@
 #pragma mark -alert-
 - (void)alert:(NSString *)title
       message:(NSString *)message
-      handler:(void(^)(UIAlertAction*))action;
+         sure:(void(^)(UIAlertAction*))sureAction
+       cancel:(void(^)(UIAlertAction*))cancelAction
+  singleCancel:(BOOL)single;
 
 @end

@@ -14,4 +14,10 @@
 #define EM_CLIENT_ID @"YXA6lqLIwIFWEea2y7NvqfvvMQ"
 #define EM_CLIENT_SCRET @"YXA6O5RpbCN2cWYBWMo_xxaxJwt5bsQ"
 
+#define EM_PUSH_DEV @"MYChatDev"
+#define EM_PUSH_PRODUCTION @"MYChatProduction"
+
+//账户信息
+#import "UserConfig.h"
+
 #endif /* AppKeyConfig_h */

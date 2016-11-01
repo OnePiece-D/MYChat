@@ -11,8 +11,12 @@
 #import "NaviController.h"
 #import "LoginController.h"
 #import "DiscoverController.h"
+
+#import "ChatRoomController.h"
+
 @interface HomeController ()
 @property (nonatomic, weak) id<myProtocol> protocol;
+
 @end
 
 @implementation HomeController
@@ -37,7 +41,13 @@
     [button setTitle:@"button" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+
     
+    UIButton * roomBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    roomBtn.frame = CGRectMake(100, 150, 100, 30);
+    [roomBtn setTitle:@"ROOM" forState:UIControlStateNormal];
+    [roomBtn addTarget:self action:@selector(roomAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:roomBtn];
 }
 
 - (void)action {
@@ -49,6 +59,12 @@
     }
     [self presentViewController:navi animated:YES completion:nil];
 }
+
+- (void)roomAction {
+//    ChatRoomController * roomVC = [ChatRoomController.alloc initWithConversationChatter:USER_ONE conversationType:EMConversationTypeChat];
+//    [self.navigationController pushViewController:roomVC animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,15 +8,34 @@ target 'MYChat' do
   #Pods for MYChat
   project 'MYChat'
   #pod 'Hyphenate_CN'
-pod 'ReactiveCocoa'
-
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  
+  pod 'ReactiveCocoa'
+  
+  pod 'Masonry'
+  pod 'Toast'
+  pod 'MBProgressHUD'
+  
+  pod 'MJExtension'
+  pod 'MJRefresh'
 
   target 'MYChatTests' do
       inherit! :search_paths
       
 #pod 'Hyphenate_CN'
  
-pod 'ReactiveCocoa'
+ pod 'AFNetworking'
+ pod 'SDWebImage'
+ 
+ pod 'ReactiveCocoa'
+ 
+ pod 'Masonry'
+ pod 'Toast'
+ pod 'MBProgressHUD'
+ 
+ pod 'MJExtension'
+ pod 'MJRefresh'
 
    # Pods for testing
   end
@@ -25,7 +44,17 @@ pod 'ReactiveCocoa'
     inherit! :search_paths
     #pod 'Hyphenate_CN'
 
+pod 'AFNetworking'
+pod 'SDWebImage'
+
 pod 'ReactiveCocoa'
+
+pod 'Masonry'
+pod 'Toast'
+pod 'MBProgressHUD'
+
+pod 'MJExtension'
+pod 'MJRefresh'
 
     # Pods for testing
   end
