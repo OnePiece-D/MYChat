@@ -27,7 +27,7 @@
     [self.window makeKeyAndVisible];
     
     //环信注册
-    [[ChatConfig shareConfig] setEMAppKey:EM_APPKEY apnsName:@""];
+    [[ChatConfig shareConfig] setEMAppKey:EM_APPKEY apnsName:EM_PUSH_DEV];
     
     [[NaviConfig config] defaultConfig];
     
@@ -43,16 +43,33 @@
 }
 
 
+/**
+ APP进入后台
+
+ @param application 配置进入后台时的参数
+ */
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //环信的配置
     [[EMClient sharedClient] applicationDidEnterBackground:application];
+    
+    /**
+     *  其他的配置
+     */
 }
 
 
+/**
+ APP将要从后台返回
+
+ @param application 配置将要从后台返回的参数
+ */
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    //环信的配置
     [[EMClient sharedClient] applicationWillEnterForeground:application];
+    
+    /**
+     *  其他的配置
+     */
 }
 
 

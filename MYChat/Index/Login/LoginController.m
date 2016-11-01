@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    EMError * error = [[EMClient sharedClient] registerWithUsername:@"a952942236" password:@"123456a"];
+    if (!error) {
+        NSLog(@"注册成功");
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

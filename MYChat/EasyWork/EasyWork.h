@@ -9,7 +9,17 @@
 #ifndef EasyWork_h
 #define EasyWork_h
 
+//默认参数配置
 #import "AppKeyConfig.h"
+
+//环信配置
+#import "ChatConfig.h"
+
+
+
+/**
+ 这是其他的类别什么的
+ */
 #import "UIImage+Extension.h"
 
 //关于尺寸
