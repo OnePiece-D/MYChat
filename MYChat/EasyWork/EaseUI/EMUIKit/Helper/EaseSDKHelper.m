@@ -145,7 +145,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)hyphenateApplication:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [[EMClient sharedClient] application:application didReceiveRemoteNotification:userInfo];
+    //[[EMClient sharedClient] application:application didReceiveRemoteNotification:userInfo];
 }
 
 - (void)dealloc

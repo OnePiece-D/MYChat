@@ -61,8 +61,8 @@
 }
 
 - (void)roomAction {
-//    ChatRoomController * roomVC = [ChatRoomController.alloc initWithConversationChatter:USER_ONE conversationType:EMConversationTypeChat];
-//    [self.navigationController pushViewController:roomVC animated:YES];
+    ChatRoomController * roomVC = [ChatRoomController.alloc initWithConversationChatter:USER_ONE conversationType:EMConversationTypeChat];
+    [self.navigationController pushViewController:roomVC animated:YES];
 }
 
 

@@ -15,7 +15,7 @@
 + (UITabBarController*)setTabBar {
     TabBarController * tabBar = [TabBarController.alloc init];
     NSArray * tabBarArray = @[@"HomeController",@"DiscoverController",@"MineController"];
-    NSArray * titleArray = @[@"首页",@"发现",@"我的"];
+    NSArray * titleArray = @[@"消息",@"联系人",@"我"];
     NSMutableArray * VCArray = [NSMutableArray array];
     int i = 0;
     for (NSString * tabBarTitle in tabBarArray) {

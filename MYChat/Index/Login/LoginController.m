@@ -62,25 +62,26 @@
 
 #pragma mark -Action-
 - (void)clickAction:(id)sender {
+    __weak typeof(self) wSelf = self;
     if (sender == _loginBtn) {
-        //登录处理
-        EMError *error = [EM_Share loginWithUsername:USER_ONE password:USER_ONE_PASSWORD];
-        if (!error) {
-            DLog(@"登录成功");
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self dismissViewControllerAnimated:YES completion:nil];
-            });
-        }else {
-            DLog(@"%@",error);
-        }
+        [self alert:nil message:@"选择登录" sure:^(UIAlertAction * actionSure) {
+            //One用户
+            [wSelf loginUser:USER_ONE passWord:USER_ONE_PASSWORD];
+        } cancel:^(UIAlertAction * actionCancel) {
+            //two用户
+            [wSelf loginUser:USER_TWO passWord:USER_TWO_PASSWORD];
+        } singleCancel:NO];
+        
+        
     }else if(sender == _registBtn) {
-        //注册处理
-        EMError *error =  [EM_Share registerWithUsername:USER_ONE password:USER_ONE_PASSWORD];
-        if (!error) {
-            DLog(@"注册成功");
-        }else {
-            DLog(@"%@",error);
-        }
+        [self alert:nil message:@"选择注册" sure:^(UIAlertAction * actionSure) {
+            //One用户
+            [wSelf registUser:USER_ONE passWord:USER_TWO_PASSWORD];
+        } cancel:^(UIAlertAction * actionCancel) {
+            //two用户
+            [wSelf registUser:USER_TWO passWord:USER_TWO_PASSWORD];
+            
+        } singleCancel:NO];
     }else {
         [self alert:nil message:@"没有对应信息" sure:nil cancel:nil singleCancel:YES];
     }
@@ -127,6 +128,29 @@
     });
 }
 
+//登录处理
+- (void)loginUser:(NSString *)user passWord:(NSString *)passWord {
+    //登录处理
+    EMError *error = [EM_Share loginWithUsername:user password:passWord];
+    if (!error) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        });
+    }else {
+        DLog(@"%@",error);
+    }
+}
+
+//注册处理
+- (void)registUser:(NSString *)user passWord:(NSString *)passWord {
+    //注册处理
+    EMError *error =  [EM_Share registerWithUsername:user password:passWord];
+    if (!error) {
+        [self alert:nil message:@"注册成功！" sure:nil cancel:nil singleCancel:YES];
+    }else {
+        DLog(@"%@",error);
+    }
+}
 
 #pragma mark -各种加载-
 - (UITextField *)username {
