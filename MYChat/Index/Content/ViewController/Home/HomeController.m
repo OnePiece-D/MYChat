@@ -1,21 +1,23 @@
 //
-//  DiscoverController.m
+//  HomeViewController.m
 //  MYChat
 //
 //  Created by ycd15 on 16/9/26.
 //  Copyright © 2016年 YCD_WYL. All rights reserved.
 //
 
-#import "DiscoverController.h"
+#import "HomeController.h"
 
-#import "ALocationManager.h"
+#import "NaviController.h"
+#import "LoginController.h"
 
 
-@interface DiscoverController ()
+@interface HomeController ()
+
 
 @end
 
-@implementation DiscoverController
+@implementation HomeController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -27,29 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.naviTitle = @"新大陆";
+    self.naviTitle = @"消息";
     
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-//    ALocationManager * locationManager = [ALocationManager shareManager];
-//    
-//    if (locationManager) {
-//        //有权限
-//        @weakify(self);
-//        locationManager.updateLocation = ^(CLLocation *location,CGFloat latitude,CGFloat longitude){
-//            @strongify(self);
-//            
-//            [self alert:nil message:@"你好" handler:nil];
-//        };
-//    }else {
-//        [self alert:nil message:@"没有权限" handler:^(UIAlertAction * action) {
-//            
-//        }];
-//    }
+    LoginController * VC = [LoginController.alloc init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 

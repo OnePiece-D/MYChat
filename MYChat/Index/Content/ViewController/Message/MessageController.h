@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  DiscoverController.h
 //  MYChat
 //
 //  Created by ycd15 on 16/9/26.
@@ -8,8 +8,6 @@
 
 #import "RootViewController.h"
 
-#import "myProtocol.h"
-
-@interface HomeController : RootViewController<myProtocol>
+@interface MessageController : RootViewController
 
 @end

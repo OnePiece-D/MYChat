@@ -7,11 +7,12 @@
 //
 
 #import "LoginController.h"
-#import "myProtocol.h"
-@interface LoginController ()<myProtocol>
 
-@property (nonatomic, strong) UITextField * username;
-@property (nonatomic, strong) UITextField * passWord;
+#import "TextFieldTwoLineView.h"
+
+@interface LoginController ()
+
+@property (nonatomic, strong) TextFieldTwoLineView * textInputView;
 
 
 @property (nonatomic, strong) UIButton * pushBtn;
@@ -87,31 +88,30 @@
     }
 }
 
+//RAC控制两个按钮的状态
+
 
 #pragma mark -控件位置-
 - (void)setLocation {
     __weak typeof(self) wSelf =self;
-    __weak typeof(UIView*) wView = self.view;
-    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(wView).offset(100);
-        make.right.equalTo(wView).offset(-100);
-        
-        make.top.equalTo(wView).offset(100);
-        make.height.mas_equalTo(@44);
+    __weak typeof(UIView*) weakView = self.view;
+    [self.textInputView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(weakView);
+        make.top.equalTo(weakView).offset(15);
+        make.height.mas_equalTo(@90);
     }];
-    [self.registBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(wView).offset(100);
-        make.right.equalTo(wView).offset(-100);
-        
-        make.top.equalTo(wSelf.loginBtn.mas_bottom).offset(10);
-        make.height.mas_equalTo(@44);
+    [self.pushBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakView).offset(20);
+        make.right.equalTo(weakView).offset(-20);
+        make.top.equalTo(wSelf.textInputView.mas_bottom).offset(20);
+        make.height.mas_offset(@50);
     }];
 }
 
 #pragma mark -添加视图-
 - (void)addSubView {
-    [self.view addSubview:self.loginBtn];
-    [self.view addSubview:self.registBtn];
+    [self.view addSubview:self.textInputView];
+    [self.view addSubview:self.pushBtn];
 }
 
 #pragma mark -其他的没啥用的-
@@ -153,36 +153,19 @@
 }
 
 #pragma mark -各种加载-
-- (UITextField *)username {
-    if (!_username) {
-        _username = [UITextField.alloc initWithFrame:CGRectMake(100, 100, 100, 30)];
-        
-        _username.layer.borderColor = RGBCOLOR(255, 0, 0).CGColor;
-        _username.layer.borderWidth = 1.f;
+- (TextFieldTwoLineView *)textInputView {
+    if (!_textInputView) {
+        _textInputView = [TextFieldTwoLineView.alloc initWithFrame:CGRectZero placeholder:@[
+                                                                                            @"请输入账号",@"请输入密码"
+                                                                                            ] response:@"获取验证码"];
     }
-    return _username;
-}
-
-- (UITextField *)passWord {
-    if (!_passWord) {
-        _passWord = [UITextField.alloc initWithFrame:CGRectMake(100, 150, 100, 30)];
-        
-        _passWord.layer.borderColor = RGBCOLOR(255, 0, 0).CGColor;
-        _passWord.layer.borderWidth = 1.f;
-    }
-    return _passWord;
+    return _textInputView;
 }
 
 - (UIButton *)pushBtn {
     if (!_pushBtn) {
-        _pushBtn = [UIButton.alloc initWithFrame:CGRectMake(100, 200, 100, 30)];
+        _pushBtn = [Factory createBtn:CGRectZero title:@"登录" type:UIButtonTypeCustom target:self action:@selector(clickAction:)];
         
-        
-        [_pushBtn setTitle:@"Sign" forState:UIControlStateNormal];
-        [_pushBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        
-        
-        [_pushBtn setBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor]] forState:UIControlStateDisabled];
     }
     return _pushBtn;
 }
