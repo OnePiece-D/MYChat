@@ -11,7 +11,6 @@
 #import "NaviController.h"
 #import "LoginController.h"
 
-
 @interface HomeController ()
 
 
@@ -31,8 +30,12 @@
     // Do any additional setup after loading the view.
     self.naviTitle = @"消息";
     
-    LoginController * VC = [LoginController.alloc init];
-    [self.navigationController pushViewController:VC animated:YES];
+    if (!UserDefaultObjectForKey(@"username")) {
+        LoginViewModel * viewModel = [LoginViewModel.alloc init];
+        LoginController * VC = [LoginController.alloc initWithViewModel:viewModel];
+        NaviController * navi = [NaviController.alloc initWithRootViewController:VC];
+        [self presentViewController:navi animated:YES completion:nil];
+    }
 }
 
 

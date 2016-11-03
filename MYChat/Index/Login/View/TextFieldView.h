@@ -48,4 +48,6 @@ typedef NS_ENUM(NSInteger,Line_Dir) {
  */
 - (void)setLineHiden:(BOOL)hiden mid:(BOOL)mid lineDir:(Line_Dir)lineDir;
 
+- (void)endEditing;
+
 @end

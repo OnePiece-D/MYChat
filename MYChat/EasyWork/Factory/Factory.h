@@ -14,12 +14,18 @@
 /**
  *  创建UIButton
  */
-+ (UIButton*)createBtn:(CGRect)frame
-                 title:(NSString *)title
++ (nullable UIButton*)createBtn:(CGRect)frame
+                 title:(nullable NSString *)title
                   type:(UIButtonType)type
                 target:(nullable id)target
                 action:(nullable SEL)action;
 
+
++ (void)setBackgroundBtn:(nullable UIButton*)btn
+                  normal:(nullable UIImage*)normal
+               highlight:(nullable UIImage*)highlight
+                selected:(nullable UIImage*)selected
+                  enable:(nullable UIImage*)enable;
 
 
 @end

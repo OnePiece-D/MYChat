@@ -26,27 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.navigationController.viewControllers.count > 1) {
+        //push的都加返回的
+        [self addLeftBarItem:@"naviBack" selected:@"naviBackHighlight" action:nil];
+    }
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.titleView = self.naviTitleView;
-    self.navigationItem.backBarButtonItem = self.leftBar;
-}
-
-
-#pragma mark -alert-
-- (void)alert:(NSString *)title
-      message:(NSString *)message
-      sure:(void(^)(UIAlertAction*))sureAction
-       cancel:(void(^)(UIAlertAction*))cancelAction singleCancel:(BOOL)single {
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:cancelAction];
-    [alert addAction:cancel];
-    if (single != YES) {
-        
-        UIAlertAction * sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:sureAction];
-        [alert addAction:sure];
-    }
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -67,22 +54,9 @@
     return _naviTitleView;
 }
 
-
-//left-Bar
-- (UIBarButtonItem *)leftBar {
-    if (!_leftBar) {
-#warning 这里打算事件分离
-        
-    }
-    return _leftBar;
-}
-
 //left-Bar
 - (void)addLeftBarItem:(NSString *)name action:(SEL)action {
-    if (!action) {
-        action = @selector(popOrDismiss);
-    }
-    [self.navigationItem setLeftBarButtonItem:[self addBarButtonItem:name selectedName:nil action:action]];
+    [self addLeftBarItem:name selected:nil action:action];
 }
 
 - (void)addLeftBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action {
@@ -90,21 +64,24 @@
         action = @selector(popOrDismiss);
     }
     [self.navigationItem setLeftBarButtonItem:[self addBarButtonItem:imageName selectedName:selectedName action:action]];
+    UIButton * button = self.navigationItem.leftBarButtonItem.customView;
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, -44, 0, 0);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, -44, 0, 0);
 }
 
 //right-Bar
-- (void)addRightItem:(NSString *)name action:(SEL)action {
-    if (!action) {
-        action = @selector(popOrDismiss);
-    }
-    [self.navigationItem setRightBarButtonItem:[self addBarButtonItem:name selectedName:nil action:action]];
+- (void)addRightBarItem:(NSString *)name action:(SEL)action {
+    [self addRightBarItem:name selected:nil action:action];
 }
 
-- (void)addRIghtItemImage:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action {
+- (void)addRightBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action {
     if (!action) {
         action = @selector(popOrDismiss);
     }
     [self.navigationItem setRightBarButtonItem:[self addBarButtonItem:imageName selectedName:selectedName action:action]];
+    UIButton * button = self.navigationItem.rightBarButtonItem.customView;
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -23);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -23);
 }
 
 //添加图片或者字体在BarItem上
@@ -117,10 +94,13 @@
         [button setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:selectedName] forState:UIControlStateHighlighted];
     }else {
+        NSLog(@"name:%@",name);
         [button setTitle:name forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     }
+    button.titleLabel.font = kFont(14);
+    
     
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     
@@ -128,6 +108,28 @@
     return item;
 }
 
+#pragma mark -alert-
+- (void)alert:(NSString *)title
+      message:(NSString *)message
+      sure:(void(^)(UIAlertAction*))sureAction
+       cancel:(void(^)(UIAlertAction*))cancelAction singleCancel:(BOOL)single {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:cancelAction];
+    [alert addAction:cancel];
+    if (single != YES) {
+        
+        UIAlertAction * sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:sureAction];
+        [alert addAction:sure];
+    }
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark -Toast-
+- (void)showToast:(NSString *)toast {
+    [self.view makeToast:toast];
+}
+
+#pragma mark -Method-
 - (void)popOrDismiss {
     NSArray *viewcontrollers=self.navigationController.viewControllers;
     if (viewcontrollers.count>1) {

@@ -16,12 +16,12 @@
 /**
  *  导航栏
  */
-//left-Bar
+//left-Bar  action可以使是nil
 - (void)addLeftBarItem:(NSString *)name action:(SEL)action;
 - (void)addLeftBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action;
 //right-Bar
-- (void)addRightItem:(NSString *)name action:(SEL)action;
-- (void)addRIghtItemImage:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action;
+- (void)addRightBarItem:(NSString *)name action:(SEL)action;
+- (void)addRightBarItem:(NSString *)imageName selected:(NSString *)selectedName action:(SEL)action;
 
 #pragma mark -alert-
 - (void)alert:(NSString *)title
@@ -29,5 +29,9 @@
          sure:(void(^)(UIAlertAction*))sureAction
        cancel:(void(^)(UIAlertAction*))cancelAction
   singleCancel:(BOOL)single;
+
+#pragma mark -Toast-
+- (void)showToast:(NSString *)toast;
+
 
 @end

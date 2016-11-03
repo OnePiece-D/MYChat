@@ -25,6 +25,7 @@
 #import "EaseUI.h"                  //环信的EaseUI
 #import "UserDefaultUtil.h"         //数据存储
 #import "RegularExpressionTool.h"       //正则
+#import "TimeManager.h"             //时间管理
 
 /**
  类别
@@ -104,6 +105,11 @@
 [[NSUserDefaults standardUserDefaults] removeObjectForKey:__KEY__];\
 [[NSUserDefaults standardUserDefaults] synchronize];\
 }
+
+/**
+ *  通知中心
+ */
+#define NotiCenter [NSNotificationCenter defaultCenter]
 
 
 //GCD

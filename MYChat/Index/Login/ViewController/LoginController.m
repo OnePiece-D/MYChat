@@ -9,87 +9,98 @@
 #import "LoginController.h"
 
 #import "TextFieldTwoLineView.h"
+#import "EnrollController.h"
 
 @interface LoginController ()
 
+@property (nonatomic, strong) LoginViewModel * viewModel;
+
+//注册等文本输入框
 @property (nonatomic, strong) TextFieldTwoLineView * textInputView;
-
-
+//登录按钮
 @property (nonatomic, strong) UIButton * pushBtn;
-
-//登录和注册按钮
-@property (nonatomic, strong) UIButton * loginBtn;
-@property (nonatomic, strong) UIButton * registBtn;
 
 @end
 
 @implementation LoginController
 
+- (instancetype)initWithViewModel:(LoginViewModel *)viewModel {
+    self = [super init];
+    if (self) {
+        self.viewModel = viewModel;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    /*
-    [self addLeftBarItem:@"返回" action:nil];
-    
-    [self.view addSubview:self.username];
-    [self.view addSubview:self.passWord];
-    [self.view addSubview:self.pushBtn];
-    
-    [self.pushBtn setTitle:@"PUSH" forState:UIControlStateNormal];
-    [self.pushBtn setTitleColor:RGBCOLOR(0, 0, 0) forState:UIControlStateNormal];
-    
-    RACSignal * validUsernameSignal = [self.username.rac_textSignal map:^id(id value) {
-        return @([(NSString*)value isEqualToString:@"123123"]);
-    }];
-    RACSignal * validPasswordSignal = [self.passWord.rac_textSignal map:^id(id value) {
-        return @([(NSString *)value isEqualToString:@"123123"]);
-    }];
-    
-    RACSignal * signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal,validPasswordSignal] reduce:^id(NSNumber * usernameValid, NSNumber * passwordValid){
-        return [usernameValid boolValue] && [passwordValid boolValue] ? @YES : @NO;
-    }];
-    RAC(self.pushBtn, enabled) = signUpActiveSignal;
-    
-    @weakify(self);
-    [[self.pushBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        [self requestNetResult];
-    }];
-     */
+    [self addRightBarItem:@"注册" action:@selector(registAction)];
     
     [self addSubView];
     [self setLocation];
+    
+    [self bindViewModel];
+    
+    [NotiCenter addObserver:self selector:@selector(notiUserDic:) name:@"ENROLL_USERNAME" object:nil];
 }
 
-#pragma mark -Action-
-- (void)clickAction:(id)sender {
-    __weak typeof(self) wSelf = self;
-    if (sender == _loginBtn) {
-        [self alert:nil message:@"选择登录" sure:^(UIAlertAction * actionSure) {
-            //One用户
-            [wSelf loginUser:USER_ONE passWord:USER_ONE_PASSWORD];
-        } cancel:^(UIAlertAction * actionCancel) {
-            //two用户
-            [wSelf loginUser:USER_TWO passWord:USER_TWO_PASSWORD];
-        } singleCancel:NO];
-        
-        
-    }else if(sender == _registBtn) {
-        [self alert:nil message:@"选择注册" sure:^(UIAlertAction * actionSure) {
-            //One用户
-            [wSelf registUser:USER_ONE passWord:USER_TWO_PASSWORD];
-        } cancel:^(UIAlertAction * actionCancel) {
-            //two用户
-            [wSelf registUser:USER_TWO passWord:USER_TWO_PASSWORD];
-            
-        } singleCancel:NO];
-    }else {
-        [self alert:nil message:@"没有对应信息" sure:nil cancel:nil singleCancel:YES];
-    }
-}
 
 //RAC控制两个按钮的状态
+- (void)bindViewModel {
+    __weak typeof(self) wSelf = self;
+    self.naviTitle = self.viewModel.naviTitle;
+    
+    RAC(self.viewModel, userName) = self.textInputView.oneLineTextField.textField.rac_textSignal;
+    RAC(self.viewModel, passWord) = self.textInputView.twoLineTextField.textField.rac_textSignal;
+    
+    RAC(self.textInputView.rightView.rightClickBtn, enabled) = self.viewModel.userSignal;
+    RAC(self.pushBtn, enabled) = self.viewModel.validSignal;
+    [[self.pushBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        //点击响应
+        [wSelf loginAction];
+    }];
+    
+    self.textInputView.rightViewClickBlock = ^(UIButton* button) {
+        wSelf.viewModel.canClickBtn = NO;
+        button.enabled = NO;
+        
+        NSString * originBtnStr = button.titleLabel.text;
+        [TimeManager startTime:1 countTime:^(NSInteger count) {
+            
+            if (10-count > 0) {
+                [button setTitle:[NSString stringWithFormat:@"%lds",10-count] forState:UIControlStateNormal];
+            }else {
+                [button setTitle:originBtnStr forState:UIControlStateNormal];
+                wSelf.viewModel.canClickBtn = YES;
+                button.enabled = YES;
+            }
+        }];
+    };
+}
 
+
+- (void)loginAction {
+    __weak typeof(self) wSelf = self;
+    self.pushBtn.enabled = NO;
+    
+    NSString * username = self.textInputView.oneLineTextField.textField.text;
+    NSString * password = self.textInputView.twoLineTextField.textField.text;
+    [EM_Share loginWithUsername:username password:password completion:^(NSString *aUsername, EMError *aError) {
+        if (!aError) {
+            UserDefaultSetObjectForKey(aUsername, @"username");
+            [EM_Share.options setIsAutoLogin:YES];
+            [wSelf dismissViewControllerAnimated:YES completion:nil];
+        }else {
+            [self showHint:@"登录失败" yOffset:36.f];
+        }
+        self.pushBtn.enabled = YES;
+    }];
+}
+
+- (void)registAction {
+    EnrollController * enrollVC = [EnrollController.alloc initWithViewModel:[LoginViewModel.alloc init]];
+    [self.navigationController pushViewController:enrollVC animated:YES];
+}
 
 #pragma mark -控件位置-
 - (void)setLocation {
@@ -114,18 +125,13 @@
     [self.view addSubview:self.pushBtn];
 }
 
-#pragma mark -其他的没啥用的-
-
-- (void)setMyName:(NSString *)name {
-    NSLog(@"%@",name);
-}
-
-- (void)requestNetResult {
-    self.pushBtn.enabled = NO;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.pushBtn.enabled = YES;
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });
+#pragma mark -其他的处理-
+//通知的账户名
+- (void)notiUserDic:(NSNotification*)noti {
+    NSDictionary * info = noti.userInfo;
+    //key: username password
+    [self.textInputView setOneLine:info[@"username"] twoLine:info[@"password"]];
+    self.pushBtn.enabled = YES;
 }
 
 //登录处理
@@ -155,37 +161,42 @@
 #pragma mark -各种加载-
 - (TextFieldTwoLineView *)textInputView {
     if (!_textInputView) {
-        _textInputView = [TextFieldTwoLineView.alloc initWithFrame:CGRectZero placeholder:@[
-                                                                                            @"请输入账号",@"请输入密码"
-                                                                                            ] response:@"获取验证码"];
+        _textInputView = [TextFieldTwoLineView.alloc initWithFrame:CGRectZero placeholder:@[@"请输入账号",@"请输入密码"] response:@"获取验证码"];
+        
     }
     return _textInputView;
 }
 
 - (UIButton *)pushBtn {
     if (!_pushBtn) {
-        _pushBtn = [Factory createBtn:CGRectZero title:@"登录" type:UIButtonTypeCustom target:self action:@selector(clickAction:)];
+        _pushBtn = [Factory createBtn:CGRectZero title:@"登录" type:UIButtonTypeCustom target:nil action:nil];
         
+        [Factory setBackgroundBtn:_pushBtn
+                           normal:[UIImage imageWithColor:[UIColor orangeColor]]
+                        highlight:[UIImage imageWithColor:[UIColor grayColor]]
+                         selected:[UIImage imageWithColor:[UIColor grayColor]]
+                           enable:[UIImage imageWithColor:[UIColor lightGrayColor]]];
+        
+        _pushBtn.layer.cornerRadius = 8.f;
+        _pushBtn.clipsToBounds = YES;
     }
     return _pushBtn;
 }
 
-
-#pragma ###############################################################################
-- (UIButton *)loginBtn {
-    if (!_loginBtn) {
-        _loginBtn = [Factory createBtn:CGRectZero title:@"登录" type:UIButtonTypeSystem target:self action:@selector(clickAction:)];
-    }
-    return _loginBtn;
+#pragma mark -touch-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    [self.textInputView endEditing];
 }
 
-- (UIButton *)registBtn {
-    if (!_registBtn) {
-        _registBtn = [Factory createBtn:CGRectZero title:@"注册" type:UIButtonTypeSystem target:self action:@selector(clickAction:)];
-    }
-    return _registBtn;
+#pragma mark -view_detail-
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [TimeManager cancelTimer];
+    
+    [self.textInputView endEditing];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

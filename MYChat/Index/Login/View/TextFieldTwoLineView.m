@@ -10,6 +10,13 @@
 
 #import "RegularExpressionTool.h"
 
+@interface TextFieldTwoLineView()
+
+@property (nonatomic, strong) TextFieldView * username;
+@property (nonatomic, strong) TextFieldView * passWord;
+
+@end
+
 @implementation TextFieldTwoLineView
 
 {
@@ -19,12 +26,14 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        //self.backgroundColor = [UIColor yellowColor];
+        self.backgroundColor = [UIColor whiteColor];
         [self addSubView];
         [self setSubViewLocation];
         [self setDisplay];
+    
         
-        [self setRACConfig];
+        self.oneLineTextField = self.username;
+        self.twoLineTextField = self.passWord;
     }
     return self;
 }
@@ -51,29 +60,41 @@
             [self.rightView.rightClickBtn setImage:[UIImage imageNamed:[response lastObject]] forState:UIControlStateSelected];
             _rightViewType = 2;
         }
+        
         //设置
         [self setRightViewSize];
+        
+        
+        __weak typeof(self) wSelf = self;
+        self.rightView.rightBtnClickBlock = ^(UIButton *clickBtn) {
+            [wSelf endEditing];
+            
+            if (wSelf.rightViewClickBlock) {
+                wSelf.rightViewClickBlock(clickBtn);
+            }
+            
+        };
     }
     return self;
 }
 
-//RAC
-- (void)setRACConfig {
-    RACSignal * userSignal = [self.username.textField.rac_textSignal map:^id(id value) {
-        return @([RegularExpressionTool isPhoneNum:(NSString*)value]);
-    }];
-    self.userSignal = userSignal;
-    
-    RACSignal * passWordSignal = [self.passWord.textField.rac_textSignal map:^id(id value) {
-        NSString * passWord = (NSString*)value;
-        return @([RegularExpressionTool isPassWordNum:passWord]);
-    }];
-    self.passWordSignal = passWordSignal;
-    
-    RAC(self.rightView.rightClickBtn, enabled) = userSignal;
+#pragma -Method-
+- (void)endEditing {
+    [self.oneLineTextField endEditing];
+    [self.twoLineTextField endEditing];
 }
 
+- (void)setOneLine:(NSString *)oneLineStr
+           twoLine:(NSString *)twoLineStr {
+    if (oneLineStr.length) {
+        self.username.textField.text = oneLineStr;
+    }
+    if (twoLineStr.length) {
+        self.passWord.textField.text = twoLineStr;
+    }
+}
 
+#pragma mark -系统配置-
 //样式
 - (void)setDisplay {
     [_username setLineHiden:NO mid:YES lineDir:Line_Bottom];
@@ -150,13 +171,18 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame: frame];
     if (self) {
+        _canRepeatClick = NO;
+        
         [self addSubview:self.verticalLine];
         [self addSubview:self.rightClickBtn];
+        
+        
+        [self.rightClickBtn addTarget:self action:@selector(rightBtnAction:) forControlEvents:UIControlEventTouchUpInside];
         
         self.verticalLine.backgroundColor = LINE_COLOR;
         [self.rightClickBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [self.rightClickBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-        
+        //[self.rightClickBtn setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
         
         __weak typeof(self) wSelf = self;
         [self.verticalLine mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -171,7 +197,23 @@
     return self;
 }
 
+//action
+- (void)rightBtnAction:(id)sender {
+    
+    UIButton*btn = (UIButton*)sender;
+    
+    if (_canRepeatClick == NO) {
+        btn.enabled = NO;
+    }else {
+        btn.selected = !btn.selected;
+    }
+    if (self.rightBtnClickBlock) {
+        self.rightBtnClickBlock(btn);
+    }
+}
 
+
+#pragma mark -With-rightBtnView-Lazing-
 - (UIView *)verticalLine {
     if (!_verticalLine) {
         _verticalLine = [UIView new];

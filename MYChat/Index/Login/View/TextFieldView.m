@@ -16,6 +16,7 @@
         _levelSpace = 8.f;             //水平间距
         _isSecret = NO;
         
+        self.backgroundColor = [UIColor whiteColor];
         [self addSubView];
         [self setSubViewLocation];
         [self setDisplay];
@@ -67,6 +68,9 @@
     self.textField.secureTextEntry = isSecret;
 }
 
+- (void)endEditing {
+    [self.textField endEditing:YES];
+}
 
 #pragma mark -私有的方法-
 

@@ -19,7 +19,7 @@
     UIButton * button = [UIButton buttonWithType:type];
     [button setTitle:title forState:UIControlStateNormal];
     if (type != UIButtonTypeSystem) {
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     //action
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -27,5 +27,15 @@
     return button;
 }
 
++ (void)setBackgroundBtn:(UIButton *)btn
+                  normal:(UIImage *)normal
+               highlight:(UIImage *)highlight
+                selected:(UIImage *)selected
+                  enable:(UIImage *)enable {
+    [btn setBackgroundImage:normal forState:UIControlStateNormal];
+    [btn setBackgroundImage:highlight forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:selected forState:UIControlStateSelected];
+    [btn setBackgroundImage:enable forState:UIControlStateDisabled];
+}
 
 @end

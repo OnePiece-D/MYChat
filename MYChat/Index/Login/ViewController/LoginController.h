@@ -8,6 +8,10 @@
 
 #import "RootViewController.h"
 
+#import "LoginViewModel.h"
+
 @interface LoginController : RootViewController
+
+- (instancetype)initWithViewModel:(LoginViewModel*)viewModel;
 
 @end

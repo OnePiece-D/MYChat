@@ -8,6 +8,6 @@
 
 #import "RootViewController.h"
 
-@interface MessageController : RootViewController
+@interface MessageController : RootViewController<EMContactManagerDelegate>
 
 @end

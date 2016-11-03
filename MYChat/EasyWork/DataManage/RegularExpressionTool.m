@@ -11,7 +11,7 @@
 @implementation RegularExpressionTool
 
 + (BOOL)isPhoneNum:(NSString *)phone {
-    NSString *numberRegex = @"^1[34578]\d{9}$";
+    NSString *numberRegex = @"^1[3|4|5|7|8][0-9]\\d{8}$";
     NSPredicate *carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",numberRegex];
     return [carTest evaluateWithObject:phone];
 }

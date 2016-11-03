@@ -294,6 +294,12 @@
 		78D593761DC9C45C00AC48DF /* TextFieldTwoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593751DC9C45C00AC48DF /* TextFieldTwoLineView.m */; };
 		78D593771DC9C45C00AC48DF /* TextFieldTwoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593751DC9C45C00AC48DF /* TextFieldTwoLineView.m */; };
 		78D5937A1DC9D7CB00AC48DF /* RegularExpressionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593791DC9D7CB00AC48DF /* RegularExpressionTool.m */; };
+		78D5937D1DCAC9DD00AC48DF /* TimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5937C1DCAC9DD00AC48DF /* TimeManager.m */; };
+		78D593811DCACDA600AC48DF /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593801DCACDA600AC48DF /* LoginViewModel.m */; };
+		78D593841DCB12B400AC48DF /* EnrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593831DCB12B400AC48DF /* EnrollController.m */; };
+		78D593851DCB12B400AC48DF /* EnrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593831DCB12B400AC48DF /* EnrollController.m */; };
+		78D5938C1DCB32EC00AC48DF /* NewFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5938B1DCB32EC00AC48DF /* NewFriendController.m */; };
+		78D5938D1DCB32EC00AC48DF /* NewFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5938B1DCB32EC00AC48DF /* NewFriendController.m */; };
 		BDB6B059D0EFC6844DE50A3A /* Pods_MYChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C704F79254DB66773851936 /* Pods_MYChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -754,6 +760,14 @@
 		78D593751DC9C45C00AC48DF /* TextFieldTwoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldTwoLineView.m; sourceTree = "<group>"; };
 		78D593781DC9D7CB00AC48DF /* RegularExpressionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionTool.h; sourceTree = "<group>"; };
 		78D593791DC9D7CB00AC48DF /* RegularExpressionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionTool.m; sourceTree = "<group>"; };
+		78D5937B1DCAC9DD00AC48DF /* TimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeManager.h; sourceTree = "<group>"; };
+		78D5937C1DCAC9DD00AC48DF /* TimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeManager.m; sourceTree = "<group>"; };
+		78D5937F1DCACDA600AC48DF /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		78D593801DCACDA600AC48DF /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		78D593821DCB12B400AC48DF /* EnrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnrollController.h; sourceTree = "<group>"; };
+		78D593831DCB12B400AC48DF /* EnrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnrollController.m; sourceTree = "<group>"; };
+		78D5938A1DCB32EC00AC48DF /* NewFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendController.h; sourceTree = "<group>"; };
+		78D5938B1DCB32EC00AC48DF /* NewFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendController.m; sourceTree = "<group>"; };
 		B41A39C96E5E78A84C0661A6 /* Pods-MYChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatUITests/Pods-MYChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYChat/Pods-MYChat.release.xcconfig"; sourceTree = "<group>"; };
 		E97691CB44272503D1628D7E /* Pods-MYChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1741,6 +1755,8 @@
 				78D593481DC991D700AC48DF /* UserDefaultUtil.m */,
 				78D593781DC9D7CB00AC48DF /* RegularExpressionTool.h */,
 				78D593791DC9D7CB00AC48DF /* RegularExpressionTool.m */,
+				78D5937B1DCAC9DD00AC48DF /* TimeManager.h */,
+				78D5937C1DCAC9DD00AC48DF /* TimeManager.m */,
 			);
 			path = DataManage;
 			sourceTree = "<group>";
@@ -1801,6 +1817,8 @@
 			children = (
 				78D593541DC9948200AC48DF /* MessageController.h */,
 				78D593551DC9948200AC48DF /* MessageController.m */,
+				78D5938A1DCB32EC00AC48DF /* NewFriendController.h */,
+				78D5938B1DCB32EC00AC48DF /* NewFriendController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1828,6 +1846,7 @@
 		78D5935E1DC9948200AC48DF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				78D5937E1DCACD9500AC48DF /* ViewModel */,
 				78D5935F1DC9948200AC48DF /* Model */,
 				78D593601DC9948200AC48DF /* View */,
 				78D593611DC9948200AC48DF /* ViewController */,
@@ -1858,8 +1877,19 @@
 			children = (
 				78D593621DC9948200AC48DF /* LoginController.h */,
 				78D593631DC9948200AC48DF /* LoginController.m */,
+				78D593821DCB12B400AC48DF /* EnrollController.h */,
+				78D593831DCB12B400AC48DF /* EnrollController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		78D5937E1DCACD9500AC48DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				78D5937F1DCACDA600AC48DF /* LoginViewModel.h */,
+				78D593801DCACDA600AC48DF /* LoginViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7D0E4046E6B97B377F771F02 /* Pods */ = {
@@ -2155,12 +2185,14 @@
 			files = (
 				780A13A51DB4AB0B00A745E1 /* RSADataVerifier.m in Sources */,
 				78D5937A1DC9D7CB00AC48DF /* RegularExpressionTool.m in Sources */,
+				78D593811DCACDA600AC48DF /* LoginViewModel.m in Sources */,
 				782FB5091DC89174009D40B9 /* EaseEmotionEscape.m in Sources */,
 				782FB5171DC89174009D40B9 /* EaseUsersListViewController.m in Sources */,
 				782FB4CD1DC89174009D40B9 /* UIImageView+EMWebCache.m in Sources */,
 				780A13A21DB4AB0B00A745E1 /* NSDataEx.m in Sources */,
 				782FB52F1DC89174009D40B9 /* EaseBubbleView+Video.m in Sources */,
 				782FB53D1DC89174009D40B9 /* EaseFaceView.m in Sources */,
+				78D5938C1DCB32EC00AC48DF /* NewFriendController.m in Sources */,
 				782FB4AF1DC89174009D40B9 /* DACircularProgressView.m in Sources */,
 				782FAC9F1DC86714009D40B9 /* Factory.m in Sources */,
 				78D5936C1DC9948200AC48DF /* TabBarController.m in Sources */,
@@ -2219,6 +2251,7 @@
 				782FB49F1DC89174009D40B9 /* MWCaptionView.m in Sources */,
 				782FB5251DC89174009D40B9 /* EaseBubbleView+File.m in Sources */,
 				782FB4F71DC89174009D40B9 /* NSDateFormatter+Category.m in Sources */,
+				78D593841DCB12B400AC48DF /* EnrollController.m in Sources */,
 				782FB5031DC89174009D40B9 /* EaseMessageReadManager.m in Sources */,
 				782FB5391DC89174009D40B9 /* EaseImageView.m in Sources */,
 				782FB4F11DC89174009D40B9 /* EaseMessageModel.m in Sources */,
@@ -2267,6 +2300,7 @@
 				780A139F1DB4AB0B00A745E1 /* DataSigner.m in Sources */,
 				782FB4E51DC89174009D40B9 /* PSTGridLayoutItem.m in Sources */,
 				782FB4E71DC89174009D40B9 /* PSTGridLayoutRow.m in Sources */,
+				78D5937D1DCAC9DD00AC48DF /* TimeManager.m in Sources */,
 				782FB4A11DC89174009D40B9 /* MWGridCell.m in Sources */,
 				782FB4B71DC89174009D40B9 /* EMSDWebImageDownloader.m in Sources */,
 				78D593681DC9948200AC48DF /* MineController.m in Sources */,
@@ -2336,6 +2370,7 @@
 				782FB5241DC89174009D40B9 /* EaseMessageTimeCell.m in Sources */,
 				782FB5201DC89174009D40B9 /* EaseCustomMessageCell.m in Sources */,
 				78D5934A1DC991D700AC48DF /* UserDefaultUtil.m in Sources */,
+				78D593851DCB12B400AC48DF /* EnrollController.m in Sources */,
 				782FB4C01DC89174009D40B9 /* MKAnnotationView+EMWebCache.m in Sources */,
 				782FB4F21DC89174009D40B9 /* EaseMessageModel.m in Sources */,
 				782FB4A81DC89174009D40B9 /* MWPhotoBrowser.m in Sources */,
@@ -2378,6 +2413,7 @@
 				782FB46C1DC89174009D40B9 /* amrFileCodec.mm in Sources */,
 				782FB4D21DC89174009D40B9 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				782FB4E41DC89174009D40B9 /* PSTGridLayoutInfo.m in Sources */,
+				78D5938D1DCB32EC00AC48DF /* NewFriendController.m in Sources */,
 				782FB4601DC89174009D40B9 /* EMAudioRecorderUtil.m in Sources */,
 				782FB4BA1DC89174009D40B9 /* EMSDWebImageDownloaderOperation.m in Sources */,
 				78D593691DC9948200AC48DF /* MineController.m in Sources */,
