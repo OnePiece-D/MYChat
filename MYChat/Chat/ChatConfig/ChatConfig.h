@@ -10,7 +10,6 @@
 
 #import "EMSDK.h"
 
-
 #define EM_Share [EMClient sharedClient]
 
 @interface ChatConfig : NSObject

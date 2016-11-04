@@ -20,6 +20,9 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ([super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.hidesBottomBarWhenPushed = YES;
+        
+        //防止tableView被导航栏覆盖
+//        self.edgesForExtendedLayout = UIRectEdgeNone;     
     }
     return self;
 }

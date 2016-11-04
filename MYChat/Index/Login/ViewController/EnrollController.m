@@ -56,6 +56,7 @@
             [wSelf.navigationController popViewControllerAnimated:YES];
         }else {
             DLog(@"aError:%@",aError);
+            [self showHint:@"注册失败!"];
         }
         
         self.enrollBtn.enabled = YES;

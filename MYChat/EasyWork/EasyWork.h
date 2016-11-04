@@ -13,7 +13,7 @@
  自己的基础配置
  */
 #import "AppDelegate.h"             //delegate
-
+#import "RootTableView.h"
 
 #import "AppKeyConfig.h"            //用到三方基本参数配置
 #import "ChatConfig.h"              //环信的基础配置

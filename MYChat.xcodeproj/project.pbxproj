@@ -300,6 +300,8 @@
 		78D593851DCB12B400AC48DF /* EnrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593831DCB12B400AC48DF /* EnrollController.m */; };
 		78D5938C1DCB32EC00AC48DF /* NewFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5938B1DCB32EC00AC48DF /* NewFriendController.m */; };
 		78D5938D1DCB32EC00AC48DF /* NewFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D5938B1DCB32EC00AC48DF /* NewFriendController.m */; };
+		78D593971DCC221300AC48DF /* RootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593951DCC221300AC48DF /* RootTableView.m */; };
+		78D593981DCC221300AC48DF /* RootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593951DCC221300AC48DF /* RootTableView.m */; };
 		BDB6B059D0EFC6844DE50A3A /* Pods_MYChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C704F79254DB66773851936 /* Pods_MYChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -768,6 +770,8 @@
 		78D593831DCB12B400AC48DF /* EnrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnrollController.m; sourceTree = "<group>"; };
 		78D5938A1DCB32EC00AC48DF /* NewFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendController.h; sourceTree = "<group>"; };
 		78D5938B1DCB32EC00AC48DF /* NewFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendController.m; sourceTree = "<group>"; };
+		78D593941DCC221300AC48DF /* RootTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableView.h; sourceTree = "<group>"; };
+		78D593951DCC221300AC48DF /* RootTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableView.m; sourceTree = "<group>"; };
 		B41A39C96E5E78A84C0661A6 /* Pods-MYChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatUITests/Pods-MYChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MYChat/Pods-MYChat.release.xcconfig"; sourceTree = "<group>"; };
 		E97691CB44272503D1628D7E /* Pods-MYChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MYChatTests/Pods-MYChatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1573,6 +1577,7 @@
 		78C3A7AA1D98B75B00951E02 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				78D593991DCC270700AC48DF /* ChatDelegate */,
 				78C3A7EE1D98B7CB00951E02 /* ChatConfig */,
 			);
 			path = Chat;
@@ -1788,6 +1793,9 @@
 		78D5934E1DC9948200AC48DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78D593921DCC221300AC48DF /* CustomView */,
+				78D593931DCC221300AC48DF /* tableView */,
+				78D593961DCC221300AC48DF /* tableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1890,6 +1898,36 @@
 				78D593801DCACDA600AC48DF /* LoginViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		78D593921DCC221300AC48DF /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		78D593931DCC221300AC48DF /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				78D593941DCC221300AC48DF /* RootTableView.h */,
+				78D593951DCC221300AC48DF /* RootTableView.m */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		78D593961DCC221300AC48DF /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		78D593991DCC270700AC48DF /* ChatDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatDelegate;
 			sourceTree = "<group>";
 		};
 		7D0E4046E6B97B377F771F02 /* Pods */ = {
@@ -2308,6 +2346,7 @@
 				782FB45D1DC89174009D40B9 /* EMAudioPlayerUtil.m in Sources */,
 				782FB4D51DC89174009D40B9 /* PSTCollectionViewCell.m in Sources */,
 				78C3A7FF1D98CC0D00951E02 /* RootViewController.m in Sources */,
+				78D593971DCC221300AC48DF /* RootTableView.m in Sources */,
 				782FB5451DC89174009D40B9 /* EaseConversationCell.m in Sources */,
 				782FB5011DC89174009D40B9 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				782FB4E11DC89174009D40B9 /* PSTCollectionViewUpdateItem.m in Sources */,
@@ -2326,6 +2365,7 @@
 				782FB5081DC89174009D40B9 /* EaseEmojiEmoticons.m in Sources */,
 				782FB5181DC89174009D40B9 /* EaseUsersListViewController.m in Sources */,
 				782FB5461DC89174009D40B9 /* EaseConversationCell.m in Sources */,
+				78D593981DCC221300AC48DF /* RootTableView.m in Sources */,
 				78C3A82D1D98D4AD00951E02 /* UIImage+Extension.m in Sources */,
 				782FB52A1DC89174009D40B9 /* EaseBubbleView+Image.m in Sources */,
 				782FB4681DC89174009D40B9 /* EMCDDeviceManager+Remind.m in Sources */,
@@ -2578,6 +2618,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B27CAC4E3066ACD57B716D1 /* Pods-MYChat.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 932BSM8LG2;
 				ENABLE_BITCODE = NO;
@@ -2610,6 +2651,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = MYChat;
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -2617,6 +2659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E225553AB2329816D5630980 /* Pods-MYChat.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 932BSM8LG2;
@@ -2650,6 +2693,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Distribution-MYChat";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

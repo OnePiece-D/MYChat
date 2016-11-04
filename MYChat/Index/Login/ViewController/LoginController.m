@@ -80,6 +80,7 @@
 
 
 - (void)loginAction {
+    [self.textInputView endEditing];
     __weak typeof(self) wSelf = self;
     self.pushBtn.enabled = NO;
     
