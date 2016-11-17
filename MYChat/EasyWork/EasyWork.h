@@ -9,6 +9,9 @@
 #ifndef EasyWork_h
 #define EasyWork_h
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 /**
  自己的基础配置
  */
@@ -26,6 +29,9 @@
 #import "UserDefaultUtil.h"         //数据存储
 #import "RegularExpressionTool.h"       //正则
 #import "TimeManager.h"             //时间管理
+
+//网络
+#import "NetManager.h"
 
 /**
  类别

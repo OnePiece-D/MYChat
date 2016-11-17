@@ -42,6 +42,7 @@
     [self bindViewModel];
     
     [NotiCenter addObserver:self selector:@selector(notiUserDic:) name:@"ENROLL_USERNAME" object:nil];
+    
 }
 
 

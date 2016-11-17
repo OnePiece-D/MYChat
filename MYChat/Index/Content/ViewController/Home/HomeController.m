@@ -29,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviTitle = @"消息";
+    //self.view.backgroundColor = [UIColor lightGrayColor];
     
     if (!UserDefaultObjectForKey(@"username")) {
         LoginViewModel * viewModel = [LoginViewModel.alloc init];
@@ -36,8 +37,14 @@
         NaviController * navi = [NaviController.alloc initWithRootViewController:VC];
         [self presentViewController:navi animated:YES completion:nil];
     }
+    
+    UIButton * btn = [Factory createBtn:CGRectMake(100, 200, 80, 30) title:@"Button" type:UIButtonTypeSystem target:self action:@selector(buttonAction)];
+    [self.view addSubview:btn];
 }
 
+- (void)buttonAction {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

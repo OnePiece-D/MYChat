@@ -17,6 +17,7 @@
                  target:(id)target
                  action:(SEL)action {
     UIButton * button = [UIButton buttonWithType:type];
+    button.frame = frame;
     [button setTitle:title forState:UIControlStateNormal];
     if (type != UIButtonTypeSystem) {
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
