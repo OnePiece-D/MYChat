@@ -43,12 +43,21 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-
-
 //网络测试
-- (void)testRequest {
-    [NetManager get:@"index" param:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DLog(@"%@",responseObject);
+- (void)testGetRequest {
+    [NetManager get:@"index" param:@{@"name":@"123",@"passworld":@"123"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"responseObject:%@",responseObject);
+        NOTIFY;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"erro:%@",error);
+        NOTIFY;
+    }];
+    WAIT;
+}
+
+- (void)testPostRequest {
+    [NetManager post:@"index" param:@{@"name":@"123",@"passworld":@"123"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"responseObject:%@",responseObject);
         NOTIFY;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"erro:%@",error);

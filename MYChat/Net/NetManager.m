@@ -14,12 +14,27 @@
      param:(NSDictionary *)param
    success:(void(^)(NSURLSessionDataTask* _Nonnull task,id _Nullable responseObject))success
 failure:(void(^)(NSURLSessionDataTask*_Nullable task,NSError*_Nonnull error))failure{
-    NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    //http://127.0.0.1:8081/index.html
-    AFHTTPSessionManager * manager = [AFHTTPSessionManager.alloc initWithBaseURL:[NSURL URLWithString:@"http://127.0.0.1:8081"] sessionConfiguration:config];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
-    [manager GET:method parameters:nil progress:nil success:success failure:failure];
+    [[self manager] GET:method parameters:param progress:nil success:success failure:failure];
+}
+
+
++ (void)post:(NSString *)method
+       param:(NSDictionary *)param
+    progress:(void (^)(NSProgress * _Nonnull))uploadProgress
+     success:(void(^)(NSURLSessionDataTask* _Nonnull task,id _Nullable responseObject))success
+     failure:(void(^)(NSURLSessionDataTask*_Nullable task,NSError*_Nonnull error))failure{
+    
+    [[self manager] POST:method parameters:param progress:uploadProgress success:success failure:failure];
+}
+
+//HTTP manager
++ (AFHTTPSessionManager*)manager {
+    NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager.alloc initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@",BaseUrl, PORT]] sessionConfiguration:config];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer] ;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"application/xml",@"text/html",@"text/json",@"text/javascript",nil];
+    return manager;
 }
 
 @end
