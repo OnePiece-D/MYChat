@@ -39,4 +39,16 @@
     [btn setBackgroundImage:enable forState:UIControlStateDisabled];
 }
 
+
++ (UITableView*)createTableView:(CGRect)frame
+                 target:(id<UITableViewDelegate,UITableViewDataSource>)target
+                           cell:(id)cell
+              reuseName:(NSString *)reuseName {
+    UITableView * tableView = [UITableView.alloc initWithFrame:frame style:UITableViewStylePlain];
+    tableView.delegate = target;
+    tableView.dataSource = target;
+    [tableView registerClass:cell forCellReuseIdentifier:reuseName];
+    return tableView;
+}
+
 @end

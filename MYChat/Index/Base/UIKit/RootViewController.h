@@ -13,6 +13,8 @@
 
 @property (nonatomic, copy) NSString * naviTitle;
 
+@property (nonatomic, strong) id model;
+
 /**
  *  导航栏
  */

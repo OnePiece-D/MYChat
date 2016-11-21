@@ -18,8 +18,6 @@
 #import "AppDelegate.h"             //delegate
 #import "RootTableView.h"
 
-#import "AppKeyConfig.h"            //用到三方基本参数配置
-#import "ChatConfig.h"              //环信的基础配置
 
 /**
  *  工具类
@@ -30,8 +28,7 @@
 #import "RegularExpressionTool.h"       //正则
 #import "TimeManager.h"             //时间管理
 
-//网络
-#import "NetManager.h"
+
 
 /**
  类别

@@ -11,8 +11,16 @@
 #import "NaviController.h"
 #import "LoginController.h"
 
-@interface HomeController ()
+#import "HomeViewModel.h"
+#import "HomeTableViewCell.h"
 
+#define reuseCellName @"homeCell"
+
+@interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView * friendList;
+
+@property (nonatomic, strong) NSArray * friendData;
 
 @end
 
@@ -31,20 +39,56 @@
     self.naviTitle = @"消息";
     //self.view.backgroundColor = [UIColor lightGrayColor];
     
-    if (!UserDefaultObjectForKey(@"username")) {
-        LoginViewModel * viewModel = [LoginViewModel.alloc init];
-        LoginController * VC = [LoginController.alloc initWithViewModel:viewModel];
-        NaviController * navi = [NaviController.alloc initWithRootViewController:VC];
-        [self presentViewController:navi animated:YES completion:nil];
-    }
+//    if (!UserDefaultObjectForKey(@"username")) {
+//        LoginViewModel * viewModel = [LoginViewModel.alloc init];
+//        LoginController * VC = [LoginController.alloc initWithViewModel:viewModel];
+//        NaviController * navi = [NaviController.alloc initWithRootViewController:VC];
+//        [self presentViewController:navi animated:YES completion:nil];
+//    }
     
-    UIButton * btn = [Factory createBtn:CGRectMake(100, 200, 80, 30) title:@"Button" type:UIButtonTypeSystem target:self action:@selector(buttonAction)];
-    [self.view addSubview:btn];
+    __weak typeof(self) wSelf = self;
+    HomeViewModel * homeViewModel = [HomeViewModel.alloc init];
+    [homeViewModel setBlockWithReturnBlock:^(id returnValue) {
+        //array
+        _friendData = returnValue;
+        [wSelf.friendList reloadData];
+    } errorBlock:^(id errorCode) {
+        //dic
+        [self showToast:@"网络error了！"];
+    } failureBlock:^{
+        //failure
+        [self showToast:@"网络出问题了！"];
+    }];
+    [homeViewModel fetchNetRequest];
+    
+    [self.view addSubview:self.friendList];
 }
 
-- (void)buttonAction {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _friendData.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:reuseCellName];
+    [cell setValueWithModel:_friendData[indexPath.row]];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.01;
+}
+
+- (UITableView*)friendList {
+    if (!_friendList) {
+        _friendList = [Factory createTableView:self.view.bounds target:self cell:[HomeTableViewCell class] reuseName:reuseCellName];
+    }
+    return _friendList;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -12,7 +12,14 @@
 #ifdef __OBJC__
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AppKeyConfig.h"            //用到三方基本参数配置
+#import "ChatConfig.h"              //环信的基础配置
+
 #import "EasyWork.h"
+//网络
+#import "NetConfiguration.h"
+
+
 #endif
 
 #endif /* PrefixHeader_pch */

@@ -20,12 +20,24 @@
                 target:(nullable id)target
                 action:(nullable SEL)action;
 
-
+/**
+ *  设置button样式
+ */
 + (void)setBackgroundBtn:(nullable UIButton*)btn
                   normal:(nullable UIImage*)normal
                highlight:(nullable UIImage*)highlight
                 selected:(nullable UIImage*)selected
                   enable:(nullable UIImage*)enable;
+
+
+/**
+ *  创建tableView的统一样式
+ */
++ (UITableView*)createTableView:(CGRect)frame
+                 target:(id<UITableViewDataSource,UITableViewDelegate>)target
+                           cell:(id)cell
+              reuseName:(NSString*)reuseName;
+
 
 
 @end
