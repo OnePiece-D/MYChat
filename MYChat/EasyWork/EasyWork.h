@@ -9,11 +9,46 @@
 #ifndef EasyWork_h
 #define EasyWork_h
 
-#import "AppDelegate.h"
-#import "AppKeyConfig.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+/**
+ 自己的基础配置
+ */
+#import "AppDelegate.h"             //delegate
+#import "RootTableView.h"
+
+
+/**
+ *  工具类
+ */
+#import "Factory.h"                 //用于快速创建
+#import "EaseUI.h"                  //环信的EaseUI
+#import "UserDefaultUtil.h"         //数据存储
+#import "RegularExpressionTool.h"       //正则
+#import "TimeManager.h"             //时间管理
+
+
+
+/**
+ 类别
+ */
 #import "UIImage+Extension.h"
 
+
+/**
+ 三方库的框架
+ */
+#import <AFNetworking/AFNetworking.h>
+
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
+#import <Masonry/Masonry.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Toast/UIView+Toast.h>
+
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
 
 //关于尺寸
 #define kTabBarH        49.0f
@@ -41,6 +76,8 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define UIColorHrex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+
+#define LINE_COLOR RGBCOLOR(221, 221, 221)
 
 
 
@@ -71,6 +108,11 @@
 [[NSUserDefaults standardUserDefaults] removeObjectForKey:__KEY__];\
 [[NSUserDefaults standardUserDefaults] synchronize];\
 }
+
+/**
+ *  通知中心
+ */
+#define NotiCenter [NSNotificationCenter defaultCenter]
 
 
 //GCD

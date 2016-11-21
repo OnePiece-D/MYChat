@@ -7,7 +7,7 @@
 //
 
 #import "AccessJudge.h"
-
+#import <CoreLocation/CoreLocation.h>
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVMediaFormat.h>
 #import <Photos/Photos.h>
