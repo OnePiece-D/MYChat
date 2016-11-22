@@ -40,6 +40,8 @@
  三方库的框架
  */
 #import <AFNetworking/AFNetworking.h>
+#import <CocoaAsyncSocket/GCDAsyncSocket.h> //for TCP
+//#import <CocoaAsyncSocket/GCDAsyncUdpSocket.h> //for UDP
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 

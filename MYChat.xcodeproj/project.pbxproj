@@ -265,7 +265,6 @@
 		7831EBC61DDD769100DEABE8 /* AccessJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = 780F30161DBDBACA00646BD4 /* AccessJudge.m */; };
 		7831EBC71DDD769100DEABE8 /* ALocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 780F30121DBDB86300646BD4 /* ALocationManager.m */; };
 		7831EBC81DDD769100DEABE8 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D593801DCACDA600AC48DF /* LoginViewModel.m */; };
-		7831EBC91DDD769100DEABE8 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7882D57F1DDC57570014DC4F /* NetManager.m */; };
 		7831EBCA1DDD776B00DEABE8 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 780A13A71DB4B13300A745E1 /* AlipaySDK.bundle */; };
 		7831EBCB1DDD777C00DEABE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F491D950B9400E995AA /* LaunchScreen.storyboard */; };
 		7831EBCC1DDD779100DEABE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F441D950B9400E995AA /* Main.storyboard */; };
@@ -274,7 +273,6 @@
 		7878DD191DC97C8100FA4CE0 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7878DD181DC97C8100FA4CE0 /* libxml2.tbd */; };
 		7878DD1B1DC97DAE00FA4CE0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7878DD1A1DC97DAE00FA4CE0 /* Social.framework */; };
 		7878DD1D1DC97DBA00FA4CE0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7878DD1C1DC97DBA00FA4CE0 /* Accounts.framework */; };
-		7882D5801DDC57570014DC4F /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7882D57F1DDC57570014DC4F /* NetManager.m */; };
 		789CF84E1DE2A347004502A3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF84D1DE2A347004502A3 /* UserModel.m */; };
 		789CF84F1DE2A347004502A3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF84D1DE2A347004502A3 /* UserModel.m */; };
 		789CF8501DE2A347004502A3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF84D1DE2A347004502A3 /* UserModel.m */; };
@@ -314,6 +312,12 @@
 		789CF8A61DE2EE6E004502A3 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8A31DE2EE6E004502A3 /* HomeViewModel.m */; };
 		789CF8A71DE2EE6E004502A3 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8A31DE2EE6E004502A3 /* HomeViewModel.m */; };
 		789CF8A81DE2EE6E004502A3 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8A31DE2EE6E004502A3 /* HomeViewModel.m */; };
+		789CF8AD1DE3E6D4004502A3 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8AB1DE3E6D4004502A3 /* NetManager.m */; };
+		789CF8AE1DE3E6D4004502A3 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8AB1DE3E6D4004502A3 /* NetManager.m */; };
+		789CF8AF1DE3E6D4004502A3 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8AB1DE3E6D4004502A3 /* NetManager.m */; };
+		789CF8B21DE3E730004502A3 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8B11DE3E730004502A3 /* Singleton.m */; };
+		789CF8B31DE3E730004502A3 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8B11DE3E730004502A3 /* Singleton.m */; };
+		789CF8B41DE3E730004502A3 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 789CF8B11DE3E730004502A3 /* Singleton.m */; };
 		78AF1F461D950B9400E995AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F441D950B9400E995AA /* Main.storyboard */; };
 		78AF1F481D950B9400E995AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F471D950B9400E995AA /* Assets.xcassets */; };
 		78AF1F4B1D950B9400E995AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF1F491D950B9400E995AA /* LaunchScreen.storyboard */; };
@@ -798,8 +802,6 @@
 		7878DD181DC97C8100FA4CE0 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		7878DD1A1DC97DAE00FA4CE0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7878DD1C1DC97DBA00FA4CE0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		7882D57E1DDC57570014DC4F /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
-		7882D57F1DDC57570014DC4F /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		789CF84C1DE2A347004502A3 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		789CF84D1DE2A347004502A3 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		789CF8571DE2A735004502A3 /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelClass.h; sourceTree = "<group>"; };
@@ -829,6 +831,10 @@
 		789CF8A01DE2ED8E004502A3 /* NetConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfiguration.h; sourceTree = "<group>"; };
 		789CF8A21DE2EE6E004502A3 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
 		789CF8A31DE2EE6E004502A3 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		789CF8AA1DE3E6D4004502A3 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		789CF8AB1DE3E6D4004502A3 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		789CF8B01DE3E730004502A3 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		789CF8B11DE3E730004502A3 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		78AF1F381D950B9400E995AA /* MYChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF1F451D950B9400E995AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78AF1F471D950B9400E995AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1873,6 +1879,24 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		789CF8A91DE3E6D4004502A3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				789CF8AA1DE3E6D4004502A3 /* NetManager.h */,
+				789CF8AB1DE3E6D4004502A3 /* NetManager.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		789CF8AC1DE3E6D4004502A3 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				789CF8B01DE3E730004502A3 /* Singleton.h */,
+				789CF8B11DE3E730004502A3 /* Singleton.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 		78AF1F2F1D950B9400E995AA = {
 			isa = PBXGroup;
 			children = (
@@ -2050,8 +2074,8 @@
 			isa = PBXGroup;
 			children = (
 				789CF8A01DE2ED8E004502A3 /* NetConfiguration.h */,
-				7882D57E1DDC57570014DC4F /* NetManager.h */,
-				7882D57F1DDC57570014DC4F /* NetManager.m */,
+				789CF8A91DE3E6D4004502A3 /* Request */,
+				789CF8AC1DE3E6D4004502A3 /* Socket */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -2547,7 +2571,6 @@
 				780F30131DBDB86300646BD4 /* ALocationManager.m in Sources */,
 				782FB4C91DC89174009D40B9 /* UIImage+EMWebP.m in Sources */,
 				789CF8A61DE2EE6E004502A3 /* HomeViewModel.m in Sources */,
-				7882D5801DDC57570014DC4F /* NetManager.m in Sources */,
 				789CF84E1DE2A347004502A3 /* UserModel.m in Sources */,
 				782FB4CF1DC89174009D40B9 /* UIView+EMWebCacheOperation.m in Sources */,
 				780A139C1DB4AB0B00A745E1 /* APAuthV2Info.m in Sources */,
@@ -2594,6 +2617,7 @@
 				782FB4BD1DC89174009D40B9 /* EMSDWebImagePrefetcher.m in Sources */,
 				780A13A41DB4AB0B00A745E1 /* RSADataSigner.m in Sources */,
 				782FB46F1DC89174009D40B9 /* EMVoiceConverter.mm in Sources */,
+				789CF8B21DE3E730004502A3 /* Singleton.m in Sources */,
 				782FB5431DC89174009D40B9 /* EaseRecordView.m in Sources */,
 				782FB51B1DC89174009D40B9 /* EaseUserCell.m in Sources */,
 				78D5936E1DC9948200AC48DF /* LoginController.m in Sources */,
@@ -2626,6 +2650,7 @@
 				789CF87E1DE2E169004502A3 /* RootTableView.m in Sources */,
 				782FB5071DC89174009D40B9 /* EaseEmojiEmoticons.m in Sources */,
 				780A139F1DB4AB0B00A745E1 /* DataSigner.m in Sources */,
+				789CF8AD1DE3E6D4004502A3 /* NetManager.m in Sources */,
 				782FB4E51DC89174009D40B9 /* PSTGridLayoutItem.m in Sources */,
 				782FB4E71DC89174009D40B9 /* PSTGridLayoutRow.m in Sources */,
 				78D5937D1DCAC9DD00AC48DF /* TimeManager.m in Sources */,
@@ -2655,11 +2680,11 @@
 				7831EBC61DDD769100DEABE8 /* AccessJudge.m in Sources */,
 				7831EBC71DDD769100DEABE8 /* ALocationManager.m in Sources */,
 				7831EBC81DDD769100DEABE8 /* LoginViewModel.m in Sources */,
-				7831EBC91DDD769100DEABE8 /* NetManager.m in Sources */,
 				782FB5041DC89174009D40B9 /* EaseMessageReadManager.m in Sources */,
 				782FB5381DC89174009D40B9 /* EaseChatToolbarItem.m in Sources */,
 				782FB5081DC89174009D40B9 /* EaseEmojiEmoticons.m in Sources */,
 				782FB5181DC89174009D40B9 /* EaseUsersListViewController.m in Sources */,
+				789CF8AE1DE3E6D4004502A3 /* NetManager.m in Sources */,
 				782FB5461DC89174009D40B9 /* EaseConversationCell.m in Sources */,
 				78C3A82D1D98D4AD00951E02 /* UIImage+Extension.m in Sources */,
 				789CF87C1DE2E169004502A3 /* HomeTableViewCell.m in Sources */,
@@ -2734,6 +2759,7 @@
 				78D593731DC9954600AC48DF /* TextFieldView.m in Sources */,
 				782FB50A1DC89174009D40B9 /* EaseEmotionEscape.m in Sources */,
 				782FB52C1DC89174009D40B9 /* EaseBubbleView+Location.m in Sources */,
+				789CF8B31DE3E730004502A3 /* Singleton.m in Sources */,
 				782FB4F01DC89174009D40B9 /* EaseConversationModel.m in Sources */,
 				782FB46E1DC89174009D40B9 /* wav.mm in Sources */,
 				782FB5321DC89174009D40B9 /* EaseBubbleView+Voice.m in Sources */,
@@ -2786,6 +2812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				789CF87A1DE2E169004502A3 /* TabBarController.m in Sources */,
+				789CF8AF1DE3E6D4004502A3 /* NetManager.m in Sources */,
 				789CF8911DE2E1D1004502A3 /* TabBarConfig.m in Sources */,
 				789CF89F1DE2EAF9004502A3 /* ChatConfig.m in Sources */,
 				789CF87D1DE2E169004502A3 /* HomeTableViewCell.m in Sources */,
@@ -2793,6 +2820,7 @@
 				789CF8831DE2E169004502A3 /* RootView.m in Sources */,
 				789CF8741DE2E169004502A3 /* RootModel.m in Sources */,
 				789CF8771DE2E169004502A3 /* NaviController.m in Sources */,
+				789CF8B41DE3E730004502A3 /* Singleton.m in Sources */,
 				789CF8861DE2E169004502A3 /* RootViewController.m in Sources */,
 				789CF8A81DE2EE6E004502A3 /* HomeViewModel.m in Sources */,
 				789CF8501DE2A347004502A3 /* UserModel.m in Sources */,

@@ -14,6 +14,7 @@
 #import "HomeViewModel.h"
 #import "HomeTableViewCell.h"
 
+
 #define reuseCellName @"homeCell"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource>
@@ -62,7 +63,11 @@
     [homeViewModel fetchNetRequest];
     
     [self.view addSubview:self.friendList];
+    
 }
+
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

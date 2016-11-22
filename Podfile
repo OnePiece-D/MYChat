@@ -10,6 +10,7 @@ target 'MYChat' do
   #pod 'Hyphenate_CN'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'CocoaAsyncSocket'
   
   pod 'ReactiveCocoa'
   
@@ -27,6 +28,7 @@ target 'MYChat' do
  
  pod 'AFNetworking'
  pod 'SDWebImage'
+ pod 'CocoaAsyncSocket'
  
  pod 'ReactiveCocoa'
  
@@ -46,6 +48,7 @@ target 'MYChat' do
 
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'CocoaAsyncSocket'
 
 pod 'ReactiveCocoa'
 
